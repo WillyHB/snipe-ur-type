@@ -73,27 +73,30 @@ public class Attributes
 
     public static Attributes GetRandomAttr()
     {
-        return new Attributes()
-        {
-            HairStyle = Helpers.GetRandom(GameManager.instance.HairStyles.Styles),
-            BodyType = Helpers.GetRandom(GameManager.instance.BodyTypes.Types),
-            EyeType = Helpers.GetRandom(GameManager.instance.EyeTypes.Types),
-            FacialHair = Helpers.GetRandom(GameManager.instance.FacialHairs.Styles),
-            TopType = Helpers.GetRandom(GameManager.instance.TopTypes.Types),
-            BottomType = Helpers.GetRandom(GameManager.instance.BottomTypes.Types),
+        Attributes attr = new Attributes();
 
-            HairColor = Helpers.GetRandom(HairColors),
-            SkinColor = Helpers.GetRandom(SkinColors),
+        attr.HairStyle = Helpers.GetRandom(GameManager.instance.HairStyles.Styles);
+        attr.BodyType = Helpers.GetRandom(GameManager.instance.BodyTypes.Types);
+        attr.EyeType = Helpers.GetRandom(GameManager.instance.EyeTypes.Types);
+        attr.FacialHair = Helpers.GetRandom(GameManager.instance.FacialHairs.Styles);
+        /*
+        attr.TopType = Helpers.GetRandom(GameManager.instance.TopTypes.Types);
+        attr.BottomType = Helpers.GetRandom(GameManager.instance.BottomTypes.Types);
+        */
 
-            EyeColor = Random.ColorHSV(),
-            Freckles = Random.Range(0f, 1f) < 0.5,
-            Special = Random.Range(0f, 1f) < 0.5,//Random.Range(0, 100) == 1,
-            SpecialBodyType = Helpers.GetRandom(GameManager.instance.SpecialBodyTypes.Types),
+        attr.HairColor = Helpers.GetRandom(HairColors);
+        attr.SkinColor = Helpers.GetRandom(SkinColors);
 
-            Height = Random.Range(0.5f, 2f),
-            Mass = Random.Range(0.5f, 2f),
-            Personality = Helpers.GetRandom(personalities),
-        };
+        attr.EyeColor = Random.ColorHSV();
+        attr.Freckles = Random.Range(0f, 1f) < 0.5;
+        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
+        attr.SpecialBodyType = Helpers.GetRandom(GameManager.instance.SpecialBodyTypes.Types);
+
+        attr.Height = Random.Range(0.5f, 2f);
+        attr.Mass = Random.Range(0.5f, 2f);
+        attr.Personality = Helpers.GetRandom(personalities);
+
+        return attr;
     }
 }
 

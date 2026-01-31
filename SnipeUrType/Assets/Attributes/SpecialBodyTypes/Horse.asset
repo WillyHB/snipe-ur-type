@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Horse
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Horse
+  IsFemale: 0
   BodyPrefab: {fileID: 3973555557705129306, guid: 5e547385ece83f44b916582af5f1c3b1, type: 3}
+  AudioComment: {fileID: 8300000, guid: 1d6e2df4e6fb5bc42aa87fa6d234b238, type: 3}
+  Descriptions:
+  - Just like big and strong... Maybe with some nice hair, doesn't mind moving fast.
+  _animator: {fileID: 0}

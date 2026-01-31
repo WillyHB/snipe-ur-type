@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ced981343bfe046ba19240edcfaf91, type: 3}
   m_Name: FacialHairs
   m_EditorClassIdentifier: Assembly-CSharp::FacialHairs
-  Styles: []
+  Styles:
+  - {fileID: 11400000, guid: 5b6578b704a52ef4299414ed05f35bd1, type: 2}

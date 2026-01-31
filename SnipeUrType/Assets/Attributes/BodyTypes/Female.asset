@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423666388e0610a498ea2b2b963b2c2d, type: 3}
   m_Name: Female
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
-  Name: 
+  Name: Woman
   IsFemale: 0
-  BodyPrefab: {fileID: 0}
-  AudioComment: {fileID: 0}
-  Descriptions: []
+  BodyPrefab: {fileID: 8656890331438493442, guid: 090d11a94535b3948aca4db114377a4a, type: 3}
+  AudioComment: {fileID: 8300000, guid: e66054c5212fcd24098b6e831ebe1af2, type: 3}
+  Descriptions:
+  - Feminine
+  _animator: {fileID: 0}

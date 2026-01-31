@@ -1483,7 +1483,7 @@ MonoBehaviour:
   EyeTypes: {fileID: 11400000, guid: d46918b0c21fd804a9518d56b53446af, type: 2}
   TopTypes: {fileID: 0}
   BottomTypes: {fileID: 0}
-  FacialHairs: {fileID: 0}
+  FacialHairs: {fileID: 11400000, guid: 1d8c336f4cf8fc448a442df2ff5e3d69, type: 2}
   Signatures:
   - {fileID: 968531907297978457, guid: b2ab2f064f6a93443adf5dcad512bf16, type: 3}
   - {fileID: -813511004769302670, guid: 75f474ecab412b94fa62d33ef3824971, type: 3}
