@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class ShootController : MonoBehaviour
 {
-    public static System.Action<Person> OnPersonShot;    
+    public static System.Action<Person> OnPersonShot;  
+    private bool hasShot;
+
     [Header("Raycast")]
     [SerializeField] private Camera cam;
     [SerializeField] private float maxDistance = 100f;
@@ -37,6 +39,9 @@ public class ShootController : MonoBehaviour
 
     private void Shoot()
     {
+        if (hasShot) return;
+        hasShot = true;
+
         if (cam == null)
         {
             Debug.LogError("ShootController: No camera assigned and no Camera.main found.");
@@ -52,6 +57,7 @@ public class ShootController : MonoBehaviour
         {
             if (audioSource != null && missSfx != null) audioSource.PlayOneShot(missSfx);
             Debug.Log("Shot missed.");
+            FindFirstObjectByType<ScoringSystem>()?.Miss();
             return;
         }
 
@@ -61,6 +67,7 @@ public class ShootController : MonoBehaviour
         {
             if (audioSource != null && missSfx != null) audioSource.PlayOneShot(missSfx);
             Debug.Log($"Hit {hit.collider.name}, but it has no Person component.");
+            FindFirstObjectByType<ScoringSystem>()?.Miss();
             return;
         }
 

@@ -17,6 +17,9 @@ public class ScoreManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        status = ScoreSession.status;
+        score = ScoreSession.score;
+
         switch(status)
         {
             case 0:

@@ -18,6 +18,7 @@ public class Application : MonoBehaviour
     void Start()
     {
         applicant = Applicant.GetNewApplicant();
+        ApplicantSession.CurrentApplicant = applicant;
         Name.text = applicant.FirstName + " "  + applicant.LastName;
         Address.text = applicant.StreetNumber + " " + applicant.Street;
         City.text = applicant.City;
