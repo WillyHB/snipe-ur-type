@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public EyeTypes EyeTypes;
     public TopTypes TopTypes;
     public BottomTypes BottomTypes;
+    public Sprite[] Signatures;
 
     private void Awake()
     {

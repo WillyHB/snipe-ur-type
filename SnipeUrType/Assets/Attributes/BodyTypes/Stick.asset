@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Stick
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Stick
+  IsFemale: 0
   BodyPrefab: {fileID: 8758088273951934612, guid: 6b678814a5c1f324186dbdcf4fd2ba71, type: 3}
+  Descriptions:
+  - Is really stickly
+  - Built like a stickman!
