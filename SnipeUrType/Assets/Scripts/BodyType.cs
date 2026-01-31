@@ -4,6 +4,7 @@ using UnityEngine;
 public class BodyType : ScriptableObject
 {
     public string Name;
+    public bool IsFemale;
     public GameObject BodyPrefab;
 
     public string[] Descriptions;

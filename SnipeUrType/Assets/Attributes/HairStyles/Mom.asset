@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HairStyle
   Name: Mom Cut
   Sprite: {fileID: 5936356172364887011, guid: b450420dd44de894ebba4d3b8a972b85, type: 3}
+  Descriptions:
+  - Looks like they'll drive me to school every day
