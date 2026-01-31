@@ -7,6 +7,7 @@ public class NPCVisual : MonoBehaviour
     [SerializeField] private Sprite taggedSprite;
 
     private bool tagged;
+    public Rigidbody2D _r;
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class NPCVisual : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _r.linearVelocity=new Vector2(1, 0);
     }
 
     // Update is called once per frame
