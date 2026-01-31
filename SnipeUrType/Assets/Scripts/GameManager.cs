@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPerson()
     {
-        _personContainer.Add(Instantiate(personPrefab, GetRandomPersonSpawn(), Quaternion.identity));
+        GameObject person = Instantiate(personPrefab, GetRandomPersonSpawn(), Quaternion.identity);
+        _personContainer.Add(person);
     }
         
 }
