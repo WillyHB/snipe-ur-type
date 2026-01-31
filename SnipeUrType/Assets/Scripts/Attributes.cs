@@ -80,7 +80,7 @@ public class Attributes
             EyeType = Helpers.GetRandom(GameManager.instance.EyeTypes.Types),
             FacialHair = Helpers.GetRandom(GameManager.instance.FacialHairs.Styles),
             TopType = Helpers.GetRandom(GameManager.instance.TopTypes.Types),
-            BottomType = Helpers.GetRandom(GameManager.instance.BottomTypes),
+            BottomType = Helpers.GetRandom(GameManager.instance.BottomTypes.Types),
 
             HairColor = Helpers.GetRandom(HairColors),
             SkinColor = Helpers.GetRandom(SkinColors),
