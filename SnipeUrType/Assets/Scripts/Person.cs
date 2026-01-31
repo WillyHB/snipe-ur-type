@@ -69,4 +69,5 @@ public class Person : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
 }
