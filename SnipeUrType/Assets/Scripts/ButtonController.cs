@@ -15,7 +15,7 @@ public class MainMenuController : MonoBehaviour
 #if UNITY_EDITOR
 		UnityEditor.EditorApplication.isPlaying = false;
 #endif
-		Application.Quit();
+		UnityEngine.Application.Quit();
 	} 
 	public void OnCreditsClick() { //main menu credits button
 		SceneManager.LoadScene("Credits");

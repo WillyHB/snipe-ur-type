@@ -110,20 +110,16 @@ public class Applicant
 
     public string DesiredPhysical { get; private set; }
 
-    private static T GetRandom<T>(T[] array)
-        => array[Random.Range(0, array.Length)];
-    
-
     public static Applicant GetNewApplicant()
     {
         Attributes attr = Attributes.GetRandomAttr();
         return new()
         {
             IdealAttributes = attr,
-            FirstName = GetRandom(firstNames),
-            LastName = GetRandom(lastNames),
-            City = GetRandom(cities),
-            Street = GetRandom(streetNames),
+            FirstName = Helpers.GetRandom(firstNames),
+            LastName = Helpers.GetRandom(lastNames),
+            City = Helpers.GetRandom(cities),
+            Street = Helpers.GetRandom(streetNames),
             StreetNumber = Random.Range(1,1000),
             Signature = GameManager.instance.Signatures[Random.Range(0, GameManager.instance.Signatures.Length)],
         };

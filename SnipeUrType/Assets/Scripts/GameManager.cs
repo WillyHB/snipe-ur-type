@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public BodyTypes SpecialBodyTypes;
     public HairStyles HairStyles;
     public EyeTypes EyeTypes;
+    public FacialHairs FacialHairs;
     public Sprite[] Signatures;
 
     private void Awake()
