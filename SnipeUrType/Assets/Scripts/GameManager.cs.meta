@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 0bd341ea8793e70489c3460efd0074ee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BodyTypes: {fileID: 11400000, guid: c5fc8ae76395a514c8a0297392f54407, type: 2}
+  - HairStyles: {fileID: 11400000, guid: 6084472a6569df84785c132b2f535ee7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

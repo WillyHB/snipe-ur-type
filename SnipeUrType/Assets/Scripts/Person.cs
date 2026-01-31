@@ -6,12 +6,18 @@ public class Person : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
+        Attributes = Attributes.GetRandomAttr();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
+
+        body.Renderer.color = Attributes.SkinColor;
+
+        body.Hair.sprite = Attributes.HairStyle.Sprite;
+        body.Hair.color = Attributes.HairColor;
+
+        body.Eyes.sprite = Attributes.EyeType.Sprite;
+        body.Eyes.color = Attributes.EyeColor;
+
+        body.Freckles.enabled = Attributes.Freckles;
     }
 }
