@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BodyType", menuName = "Attributes/BodyType")]
@@ -10,5 +11,5 @@ public class BodyType : ScriptableObject
 
     public string[] Descriptions;
 
-    public AnimatorOverrideController _animator;
+    public AnimatorController _animator;
 }

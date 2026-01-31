@@ -17,31 +17,33 @@ public class Person : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Attributes = Attributes.GetRandomAttr();
+        //_gameManager = GameManager.instance;
 
-        if (Attributes.Special)
-        {
-            GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
-            return;
-        }
+        //Attributes = Attributes.GetRandomAttr();
 
-        Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
+        //if (Attributes.Special)
+        //{
+        //    GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
+        //    return;
+        //}
 
-        body.Renderer.color = Attributes.SkinColor;
+        //Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
 
-        body.Hair.sprite = Attributes.HairStyle.Sprite;
-        body.Hair.color = Attributes.HairColor;
+        //body.Renderer.color = Attributes.SkinColor;
 
-        body.Eyes.sprite = Attributes.EyeType.Sprite;
-        body.Eyes.color = Attributes.EyeColor;
+        //body.Hair.sprite = Attributes.HairStyle.Sprite;
+        //body.Hair.color = Attributes.HairColor;
 
-        body.Freckles.enabled = Attributes.Freckles;
+        //body.Eyes.sprite = Attributes.EyeType.Sprite;
+        //body.Eyes.color = Attributes.EyeColor;
 
-        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
-        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
-        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+        //body.Freckles.enabled = Attributes.Freckles;
 
-        WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
+        //_bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        //_topAnim.runtimeAnimatorController = Attributes.TopType._animator;
+        //_bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+
+        //WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
     }
     
     // Update is called once per frame
