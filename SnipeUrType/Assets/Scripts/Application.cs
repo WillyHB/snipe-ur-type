@@ -23,6 +23,9 @@ public class Application : MonoBehaviour
         City.text = applicant.City;
         Signature.sprite = applicant.Signature;
         Personality.text = applicant.IdealAttributes.Personality;
+        Physical.text = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions) + "\n"
+            + Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions) + "\n"
+            + Helpers.GetRandom(applicant.IdealAttributes.EyeType.Descriptions) + "\n";
     }
 
 }

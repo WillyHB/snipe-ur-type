@@ -28,23 +28,23 @@ public class Attributes
 
     private static string[] personalities =
     {
-        "Love horse riding",
-        "Be a big fan of bowling",
-        "Be just like so awesome",
-        "Be a biiig fan of gacha games",
-        "Have a car??",
-        "Be not like weird",
-        "Look like they'd maybe know a thing or two about the anatomy of a horse (Important)",
-        "Look cool",
-        "Be Alive?",
+        "Loves horse riding",
+        "Is a big fan of bowling",
+        "Is just like so awesome",
+        "Is a biiig fan of gacha games",
+        "Has a car??",
+        "Is not like weird",
+        "Looks like they'd maybe know a thing or two about the anatomy of a horse (Important)",
+        "Looks cool",
+        "Is Alive?",
         "Idk?",
-        "Have a JOB",
-        "Be Funny",
-        "Not act the way they look.",
-        "DONATE TO CHARITY",
-        "Not want me",
-        "Not hate me",
-        "Be able to walk"
+        "Has a JOB",
+        "Is Funny",
+        "Doesn't act the way they look.",
+        "DONATES TO CHARITY",
+        "Doesn't want me",
+        "Doesn't hate me",
+        "Is able to walk"
     };
 
     public HairStyle HairStyle { get; private set; }
@@ -52,6 +52,7 @@ public class Attributes
     public EyeType EyeType { get; private set; }
     public TopType TopType { get; private set; }
     public BottomType BottomType { get; private set; }
+    public FacialHair FacialHair { get; private set; }
 
     public float Height { get; private set; }
     public float Mass { get; private set; }
@@ -68,29 +69,30 @@ public class Attributes
 
     public string Personality { get; private set; }
 
-    private static T GetRandom<T>(T[] array)
-        => array[Random.Range(0, array.Length)];
+    public Attributes() { }
 
     public static Attributes GetRandomAttr()
     {
-        return new()
+        return new Attributes()
         {
-            HairStyle = GameManager.instance.HairStyles.GetRandom(),
-            BodyType = GameManager.instance.BodyTypes.GetRandom(),
-            EyeType = GameManager.instance.EyeTypes.GetRandom(),
-            TopType = GameManager.instance.TopTypes.GetRandom(),
-            BottomType = GameManager.instance.BottomTypes.GetRandom(),
+            HairStyle = Helpers.GetRandom(GameManager.instance.HairStyles.Styles),
+            BodyType = Helpers.GetRandom(GameManager.instance.BodyTypes.Types),
+            EyeType = Helpers.GetRandom(GameManager.instance.EyeTypes.Types),
+            FacialHair = Helpers.GetRandom(GameManager.instance.FacialHairs.Styles),
+            TopType = Helpers.GetRandom(GameManager.instance.TopTypes.Types),
+            BottomType = Helpers.GetRandom(GameManager.instance.BottomTypes.Types),
 
-            HairColor = HairColors[Random.Range(0, HairColors.Length - 1)],
-            SkinColor = SkinColors[Random.Range(0, SkinColors.Length - 1)],
+            HairColor = Helpers.GetRandom(HairColors),
+            SkinColor = Helpers.GetRandom(SkinColors),
 
             EyeColor = Random.ColorHSV(),
             Freckles = Random.Range(0f, 1f) < 0.5,
-            Special = Random.Range(0f, 1f) < 0.5,   //Random.Range(0, 100) == 1,
-            SpecialBodyType = GameManager.instance.SpecialBodyTypes.GetRandom(),
+            Special = Random.Range(0f, 1f) < 0.5,//Random.Range(0, 100) == 1,
+            SpecialBodyType = Helpers.GetRandom(GameManager.instance.SpecialBodyTypes.Types),
+
             Height = Random.Range(0.5f, 2f),
             Mass = Random.Range(0.5f, 2f),
-            Personality = GetRandom(personalities),
+            Personality = Helpers.GetRandom(personalities),
         };
     }
 }

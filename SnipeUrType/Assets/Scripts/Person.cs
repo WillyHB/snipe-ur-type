@@ -12,30 +12,30 @@ public class Person : MonoBehaviour
 
     private float walkSpeed = 1.0f;
 
-    public Attributes Attributes;
+    public Attributes Attributes { get; private set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Attributes = Attributes.GetRandomAttr();
+        Attributes = Attributes.GetRandomAttr();
 
-        //if (Attributes.Special)
-        //{
-        //    GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
-        //    return;
-        //}
+        if (Attributes.Special)
+        {
+            GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
+            return;
+        }
 
-        //Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
+        Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
 
-        //body.Renderer.color = Attributes.SkinColor;
+        body.Renderer.color = Attributes.SkinColor;
 
-        //body.Hair.sprite = Attributes.HairStyle.Sprite;
-        //body.Hair.color = Attributes.HairColor;
+        body.Hair.sprite = Attributes.HairStyle.Sprite;
+        body.Hair.color = Attributes.HairColor;
 
-        //body.Eyes.sprite = Attributes.EyeType.Sprite;
-        //body.Eyes.color = Attributes.EyeColor;
+        body.Eyes.sprite = Attributes.EyeType.Sprite;
+        body.Eyes.color = Attributes.EyeColor;
 
-        //body.Freckles.enabled = Attributes.Freckles;
+        body.Freckles.enabled = Attributes.Freckles;
 
         _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
         _topAnim.runtimeAnimatorController = Attributes.TopType._animator;

@@ -4,6 +4,4 @@ using UnityEngine;
 public class BodyTypes : ScriptableObject
 {
     public BodyType[] Types;
-
-    public BodyType GetRandom() => Types[Random.Range(0, Types.Length)];
 }

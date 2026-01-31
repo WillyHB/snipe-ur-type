@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 423666388e0610a498ea2b2b963b2c2d, type: 3}
-  m_Name: Stick
+  m_Name: Ben
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
-  Name: Stick
+  Name: 
   IsFemale: 0
-  BodyPrefab: {fileID: 8758088273951934612, guid: 6b678814a5c1f324186dbdcf4fd2ba71, type: 3}
-  Descriptions:
-  - Is really stickly
-  - Built like a stickman!
+  BodyPrefab: {fileID: 0}
+  AudioComment: {fileID: 0}
+  Descriptions: []
+  _animator: {fileID: 0}

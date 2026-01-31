@@ -4,6 +4,4 @@ using UnityEngine;
 public class EyeTypes : ScriptableObject
 {
     public EyeType[] Types;
-
-    public EyeType GetRandom() => Types[Random.Range(0, Types.Length)];
 }
