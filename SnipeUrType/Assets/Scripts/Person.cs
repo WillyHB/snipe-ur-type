@@ -12,7 +12,7 @@ public class Person : MonoBehaviour
 
     private float walkSpeed = 1.0f;
 
-    public Attributes Attributes;
+    public Attributes Attributes { get; private set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
