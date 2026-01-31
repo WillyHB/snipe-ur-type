@@ -8,5 +8,6 @@ public class BodyType : ScriptableObject
     public GameObject BodyPrefab;
 
     public string[] Descriptions;
-    
+
+    public AnimatorOverrideController _animator;
 }
