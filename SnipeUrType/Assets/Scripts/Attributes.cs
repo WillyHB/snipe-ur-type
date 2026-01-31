@@ -6,6 +6,13 @@ public enum HairType
     Curly,
     Flat,
 }
+
+public enum HairLength
+{
+    Short,
+    Medium,
+    Long
+}
 public enum Age
 {
     Lively,
@@ -19,9 +26,16 @@ public enum BodyType
     Big
 }
 
+public enum Height
+{
+    ShortKing,
+    Average,
+    Monster,
+}
+
 public class Attributes
 {
-    public Color[] SkinColors =
+    public static Color[] SkinColors =
     {
         new Color(232,231,178), // White
         new Color(110,78,44), // Black
@@ -32,7 +46,7 @@ public class Attributes
         new Color(232,175,216), // Pink
     };
 
-    public Color[] HairColors =
+    public static Color[] HairColors =
     {
         new Color(206,232,99), // Yellow Blonde
         new Color(176,189,123), // Dirty Blonde
@@ -47,16 +61,17 @@ public class Attributes
 
 
     public HairType HairType { get; private set; }
-    public Color HairColor { get; private set; }
-    public float HairLength { get; private set; } 
-
+    public HairLength HairLength { get; private set; } 
     public BodyType BodyType { get; private set; }
-    public Color BodyColor { get; private set; }
-    public float Height { get; private set; }
+    public Height Height { get; private set; } 
+    public Age Age { get; private set; }
+
+    public Color HairColor { get; private set; }
+    public Color SkinColor { get; private set; }
+    public Color EyeColor { get; private set; }
+
 
     public bool Freckles { get; private set; }
-    public Color EyeColor { get; private set; }
-    public Age Age { get; private set; }
 
 
     private static T GetRandomEnum<T>()
@@ -66,14 +81,21 @@ public class Attributes
     }
     public static Attributes GetRandomAttr()
     {
-        Attributes attr = new();
+        return new()
+        {
+            HairType = GetRandomEnum<HairType>(),
+            BodyType = GetRandomEnum<BodyType>(),
+            Age = GetRandomEnum<Age>(),
+            Height = GetRandomEnum<Height>(),
+            HairLength = GetRandomEnum<HairLength>(),
 
-        attr.HairType = GetRandomEnum<HairType>();
-        attr.BodyType = GetRandomEnum<BodyType>();
-        attr.Age = GetRandomEnum<Age>();
-        attr.EyeColor = 
+            HairColor = HairColors[Random.Range(0, HairColors.Length - 1)],
+            SkinColor = SkinColors[Random.Range(0, SkinColors.Length -1)],
 
-        return attr;
+            EyeColor = Random.ColorHSV(),
+            Freckles = Random.Range(0f, 1f) < 0.5
+
+        };
     }
 
 }
