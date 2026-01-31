@@ -29,6 +29,8 @@ public class Attributes
     public HairStyle HairStyle { get; private set; }
     public BodyType BodyType { get; private set; }
     public EyeType EyeType { get; private set; }
+    public TopType TopType { get; private set; }
+    public BottomType BottomType { get; private set; }
 
     public Color HairColor { get; private set; }
     public Color SkinColor { get; private set; }
@@ -53,13 +55,15 @@ public class Attributes
             HairStyle = GameManager.instance.HairStyles.GetRandom(),
             BodyType = GameManager.instance.BodyTypes.GetRandom(),
             EyeType = GameManager.instance.EyeTypes.GetRandom(),
+            TopType = GameManager.instance.TopTypes.GetRandom(),
+            BottomType = GameManager.instance.BottomTypes.GetRandom(),
 
             HairColor = HairColors[Random.Range(0, HairColors.Length - 1)],
             SkinColor = SkinColors[Random.Range(0, SkinColors.Length - 1)],
 
             EyeColor = Random.ColorHSV(),
             Freckles = Random.Range(0f, 1f) < 0.5,
-            Special = Random.Range(0f, 1f) < 0.5,//Random.Range(0, 100) == 1,
+            Special = Random.Range(0f, 1f) < 0.5,   //Random.Range(0, 100) == 1,
             SpecialBodyType = GameManager.instance.SpecialBodyTypes.GetRandom(),
         };
     }

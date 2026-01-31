@@ -3,13 +3,12 @@ using UnityEngine;
 public class Person : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody2D;
-    [SerializeField] private Animator _animator;
     [SerializeField] private GameManager _gameManager;
 
-    [SerializeField] private SpriteRenderer _bodyRenderer;
-    [SerializeField] private SpriteRenderer _hairRenderer;
-    // basically every part should have its own renderer so I can just animate
-    // body in animator and snap other part's animation to the body's manually in Update()
+    [SerializeField] private Animator _bodyAnim;
+    [SerializeField] private Animator _topAnim;
+    [SerializeField] private Animator _bottomAnim;
+
 
     private float walkSpeed = 1.0f;
 
@@ -18,36 +17,42 @@ public class Person : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Attributes = Attributes.GetRandomAttr();
+        //Attributes = Attributes.GetRandomAttr();
 
-        if (Attributes.Special)
-        {
-            GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
-            return;
-        }
+        //if (Attributes.Special)
+        //{
+        //    GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
+        //    return;
+        //}
 
-        Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
+        //Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
 
-        body.Renderer.color = Attributes.SkinColor;
+        //body.Renderer.color = Attributes.SkinColor;
 
-        body.Hair.sprite = Attributes.HairStyle.Sprite;
-        body.Hair.color = Attributes.HairColor;
+        //body.Hair.sprite = Attributes.HairStyle.Sprite;
+        //body.Hair.color = Attributes.HairColor;
 
-        body.Eyes.sprite = Attributes.EyeType.Sprite;
-        body.Eyes.color = Attributes.EyeColor;
+        //body.Eyes.sprite = Attributes.EyeType.Sprite;
+        //body.Eyes.color = Attributes.EyeColor;
 
-        body.Freckles.enabled = Attributes.Freckles;
+        //body.Freckles.enabled = Attributes.Freckles;
+
+        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
+        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+
+        WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
     }
     
     // Update is called once per frame
     void Update()
     {
-        // update sprites based on body's current animation frame
+        // need to confirm with saad how to get shot
     }
 
     public void WalkToward(Vector2? direction = null)
     {
-        _animator.SetBool("isWalking", true);
+        //_animator.SetBool("isWalking", true);
 
         if (direction == null)
         {
@@ -61,12 +66,13 @@ public class Person : MonoBehaviour
 
     public void StopWalking()
     {
-        _animator.SetBool("isWalking", false);
+        //_animator.SetBool("isWalking", false);
 
         _rigidbody2D.linearVelocity = Vector2.zero;
     }
 
-    private void OnBecameInvisible()
+    private void OnBecameInvisible()    // Destroy person when they leave the screen    
     {
         Destroy(gameObject);
+    }
 }
