@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072a3c29348c13e4e9af8e6d015bb006, type: 3}
-  m_Name: EyeTypes
-  m_EditorClassIdentifier: Assembly-CSharp::EyeTypes
+  m_Script: {fileID: 11500000, guid: 5da22a29b10bfbe47a15095b3986ff69, type: 3}
+  m_Name: SpecialBodyTypes
+  m_EditorClassIdentifier: Assembly-CSharp::BodyTypes
   Types:
-  - {fileID: 11400000, guid: 64e11cc431bd04140a6ea2905f7691ee, type: 2}
+  - {fileID: 11400000, guid: 1a6e688c03972c147995886f5f271922, type: 2}

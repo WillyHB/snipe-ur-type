@@ -37,6 +37,8 @@ public class Attributes
 
     public bool Freckles { get; private set; }
 
+    public bool Special { get; private set; }
+    public BodyType SpecialBodyType { get; private set; }
 
     private static T GetRandomEnum<T>()
     {
@@ -56,9 +58,10 @@ public class Attributes
             SkinColor = SkinColors[Random.Range(0, SkinColors.Length - 1)],
 
             EyeColor = Random.ColorHSV(),
-            Freckles = Random.Range(0f, 1f) < 0.5
+            Freckles = Random.Range(0f, 1f) < 0.5,
+            Special = Random.Range(0f, 1f) < 0.5,//Random.Range(0, 100) == 1,
+            SpecialBodyType = GameManager.instance.SpecialBodyTypes.GetRandom(),
         };
     }
-
 }
 

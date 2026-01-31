@@ -5,5 +5,6 @@ public class HairStyle : ScriptableObject
 {
     public string Name;
     public Sprite Sprite;
+    public string[] Descriptions;
     
 }

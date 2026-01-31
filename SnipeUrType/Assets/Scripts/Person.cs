@@ -8,6 +8,12 @@ public class Person : MonoBehaviour
     {
         Attributes = Attributes.GetRandomAttr();
 
+        if (Attributes.Special)
+        {
+            GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
+            return;
+        }
+
         Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
 
         body.Renderer.color = Attributes.SkinColor;

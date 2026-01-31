@@ -1,0 +1,6 @@
+1. 	Go into the attributes folder you wanna create (BodyType, EyeType, HairStyle)
+2. 	Create a new Attributes/(BodyType or ...) Scriptable Object
+3. 	Set the name, and either:
+	- For EyeType or HairStyle simply set the sprite
+   	- For BodyType, create a variant of the Body Prefab, changing the sprite and moving the Head Freckles and Eyes GameObjects 	to fit on the new Sprite
+	- For SpecialBodyType, do the same but use the Special Prefab and since it's special there's no Head Freckles and Eyes

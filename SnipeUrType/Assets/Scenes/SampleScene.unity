@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   BodyTypes: {fileID: 11400000, guid: c5fc8ae76395a514c8a0297392f54407, type: 2}
+  SpecialBodyTypes: {fileID: 11400000, guid: f2b889999ee910943a9ef9a09032c294, type: 2}
   HairStyles: {fileID: 11400000, guid: 6084472a6569df84785c132b2f535ee7, type: 2}
   EyeTypes: {fileID: 11400000, guid: d46918b0c21fd804a9518d56b53446af, type: 2}
 --- !u!4 &848463690

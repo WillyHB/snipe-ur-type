@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072a3c29348c13e4e9af8e6d015bb006, type: 3}
-  m_Name: EyeTypes
-  m_EditorClassIdentifier: Assembly-CSharp::EyeTypes
-  Types:
-  - {fileID: 11400000, guid: 64e11cc431bd04140a6ea2905f7691ee, type: 2}
+  m_Script: {fileID: 11500000, guid: 423666388e0610a498ea2b2b963b2c2d, type: 3}
+  m_Name: Horse
+  m_EditorClassIdentifier: Assembly-CSharp::BodyType
+  Name: Horse
+  BodyPrefab: {fileID: 3973555557705129306, guid: 5e547385ece83f44b916582af5f1c3b1, type: 3}
