@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab00e09a0539a3347906e23165ed0bee, type: 3}
   m_Name: ShoesTypes
   m_EditorClassIdentifier: Assembly-CSharp::ShoeTypes
-  Types: []
+  Types:
+  - {fileID: 11400000, guid: b5b9b88be9cc439428ee86e26927d044, type: 2}
+  - {fileID: 11400000, guid: 916a0467512f33d46bf3ddb7ba53c6fe, type: 2}
+  - {fileID: 11400000, guid: 41bb3fce22aba724dacdc5acd0e9f71a, type: 2}
+  - {fileID: 11400000, guid: 578e0f7ad9fc6ca4b807b0ce2ada3db1, type: 2}

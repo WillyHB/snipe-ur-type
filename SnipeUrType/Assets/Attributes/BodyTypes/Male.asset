@@ -18,5 +18,5 @@ MonoBehaviour:
   AudioComment: {fileID: 8300000, guid: 89537eab9a6008243908ed92a33b9795, type: 3}
   Descriptions:
   - Manly
-  - 
-  _animator: {fileID: 0}
+  - Not a woman
+  _animator: {fileID: 9100000, guid: 9c2c5dac4455899418114e2d11b94184, type: 2}

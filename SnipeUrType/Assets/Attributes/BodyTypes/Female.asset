@@ -18,4 +18,5 @@ MonoBehaviour:
   AudioComment: {fileID: 8300000, guid: e66054c5212fcd24098b6e831ebe1af2, type: 3}
   Descriptions:
   - Feminine
-  _animator: {fileID: 0}
+  - 'Like just like like like erm '
+  _animator: {fileID: 9100000, guid: 723e28f13c2f38e418472cf8966fc7ec, type: 2}
