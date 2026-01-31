@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Glorp
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Glorp
+  IsFemale: 0
   BodyPrefab: {fileID: 8656890331438493442, guid: 090d11a94535b3948aca4db114377a4a, type: 3}
+  Descriptions:
+  - Is just so glorpy
+  - Glorp
