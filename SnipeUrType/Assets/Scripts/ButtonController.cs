@@ -3,38 +3,29 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-
-public class MainMenuController : MonoBehaviour
+public class ButtonController : MonoBehaviour
 {
-	public void OnStartClick() { //main menu start button
+	public void GoAssignment() { //main menu start button, retry button
 
 		SceneManager.LoadScene("Assignment");
 	}
-
-	public void OnExitClick() { //main menu quit button
+	public void GoQuit() { //quit button
 #if UNITY_EDITOR
 		UnityEditor.EditorApplication.isPlaying = false;
 #endif
 		
 	} 
-	public void OnCreditsClick() { //main menu credits button
+	public void GoCredits() { //main menu credits button
 		SceneManager.LoadScene("Credits");
 	}
-}  
-
-public class AssignmentController : MonoBehaviour
-{
-	public void OnContinueClick() {//continue to assignment 
+	public void GoCupid() { //when u click on cupid!
+		//do something fun
+		Debug.Log("goo goo ga ga");
+	}
+	public void GoGamePlay() {//continue to assignment 
 		SceneManager.LoadScene("GamePlay");
 	} 
-}
-
-public class ResultsController : MonoBehaviour
-{
-	public void OnMainMenuClick() { //return to main menu
+	public void GoMainMenu() { //return to main menu
 		SceneManager.LoadScene("MainMenu");
-	}
-	public void OnNextClick() { //continue to next gameplay
-		SceneManager.LoadScene("Assignment");
 	}
 }

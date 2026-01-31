@@ -14,6 +14,7 @@ public class Timer: MonoBehaviour {
         targetTime -= Time.deltaTime;
         DisplayTime(targetTime);
         if (targetTime <= 0.0f) {
+            Debug.Log("times up!");
             timerEnded();
         }
     }

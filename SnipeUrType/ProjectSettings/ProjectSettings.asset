@@ -660,7 +660,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -682,11 +688,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 5bd1ff4a-3b31-4792-bb96-e8e482c72b7b
+  cloudProjectId: b2afbab4-3887-492e-9507-87be27549c8d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: SnipeUrType
-  organizationId: unity_mbtfnklddkg_ww
+  organizationId: amatdsotm
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
