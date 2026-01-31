@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class ShootController : MonoBehaviour
 {
@@ -54,8 +52,6 @@ public class ShootController : MonoBehaviour
         {
             if (audioSource != null && missSfx != null) audioSource.PlayOneShot(missSfx);
             Debug.Log("Shot missed.");
-            ScoreManager.status = 1;
-            SceneManager.LoadScene("Score");
             return;
         }
 
@@ -80,10 +76,6 @@ public class ShootController : MonoBehaviour
         foreach (var col in person.GetComponentsInChildren<Collider2D>())
             col.enabled = false;
 
-        ScoreManager.status = 2;
-        ScoreManager.score = 69;
-        SceneManager.LoadScene("Score");
         Debug.Log($"HIT PERSON: {hit.collider.name} | HairType={person.Attributes.HairStyle} | Height={person.Attributes.Height} | Freckles={person.Attributes.Freckles}");
-     
     }
 }
