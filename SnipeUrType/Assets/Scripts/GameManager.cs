@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public BodyTypes SpecialBodyTypes;
     public HairStyles HairStyles;
     public EyeTypes EyeTypes;
+    public TopTypes TopTypes;
+    public BottomTypes BottomTypes;
     public Sprite[] Signatures;
 
     private void Awake()
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // spawn initial number of people
     }
 
     // Update is called once per frame
