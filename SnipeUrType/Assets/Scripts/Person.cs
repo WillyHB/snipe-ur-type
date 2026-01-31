@@ -13,12 +13,32 @@ public class Person : MonoBehaviour
 
     private float walkSpeed = 1.0f;
 
+    public Attributes Attributes;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // pick outfit and body size prefab here
-    }
+        Attributes = Attributes.GetRandomAttr();
 
+        if (Attributes.Special)
+        {
+            GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
+            return;
+        }
+
+        Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
+
+        body.Renderer.color = Attributes.SkinColor;
+
+        body.Hair.sprite = Attributes.HairStyle.Sprite;
+        body.Hair.color = Attributes.HairColor;
+
+        body.Eyes.sprite = Attributes.EyeType.Sprite;
+        body.Eyes.color = Attributes.EyeColor;
+
+        body.Freckles.enabled = Attributes.Freckles;
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -49,5 +69,4 @@ public class Person : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
-    }
 }

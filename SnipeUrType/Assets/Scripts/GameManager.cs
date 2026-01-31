@@ -11,6 +11,19 @@ public class GameManager : MonoBehaviour
     private float centerOffset = 2.0f;
 
     private List<GameObject> _personContainer;
+    
+    public static GameManager instance;
+
+    public BodyTypes BodyTypes;
+    public BodyTypes SpecialBodyTypes;
+    public HairStyles HairStyles;
+    public EyeTypes EyeTypes;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+        instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,4 +54,5 @@ public class GameManager : MonoBehaviour
     {
         _personContainer.Add(Instantiate(personPrefab, GetRandomPersonSpawn(), Quaternion.identity));
     }
+        
 }
