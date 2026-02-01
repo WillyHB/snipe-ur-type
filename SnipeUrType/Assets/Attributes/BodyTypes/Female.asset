@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Woman
   IsFemale: 0
-  BodyPrefab: {fileID: 8656890331438493442, guid: 090d11a94535b3948aca4db114377a4a, type: 3}
+  BodyPrefab: {fileID: 3493567858992251555, guid: 76e91d14ff5471241b46031f854f423a, type: 3}
   AudioComment: {fileID: 8300000, guid: e66054c5212fcd24098b6e831ebe1af2, type: 3}
   Descriptions:
   - Feminine

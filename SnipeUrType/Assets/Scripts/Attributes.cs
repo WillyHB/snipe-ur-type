@@ -53,6 +53,7 @@ public class Attributes
     public TopType TopType { get; private set; }
     public BottomType BottomType { get; private set; }
     public FacialHair FacialHair { get; private set; }
+    public ShoeType ShoeType { get; private set; }
 
     public float Height { get; private set; }
     public float Mass { get; private set; }
@@ -61,16 +62,18 @@ public class Attributes
     public Color SkinColor { get; private set; }
 
     public bool Special { get; private set; }
+    public bool Female { get; private set; } // #Equality
     public BodyType SpecialBodyType { get; private set; }
 
     public string Personality { get; private set; }
-
-    public Attributes() { }
 
     public static Attributes GetRandomAttr()
     {
         Attributes attr = new Attributes();
 
+        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
+        attr.Female = Random.Range(0f, 1f) < 0.5;
+        attr.ShoeType = GetRandom(GameManager.instance.ShoeTypes.Types);
         attr.HairStyle = GetRandom(GameManager.instance.HairStyles.Styles);
         attr.BodyType = GetRandom(GameManager.instance.BodyTypes.Types);
         attr.FacialHair = GetRandom(GameManager.instance.FacialHairs.Styles);
@@ -80,7 +83,6 @@ public class Attributes
         attr.HairColor = GetRandom(HairColors);
         attr.SkinColor = GetRandom(SkinColors);
 
-        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
         attr.SpecialBodyType = GetRandom(GameManager.instance.SpecialBodyTypes.Types);
 
         attr.Height = Random.Range(0.5f, 2f);

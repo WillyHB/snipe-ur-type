@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public TopTypes TopTypes;
     public BottomTypes BottomTypes;
     public FacialHairs FacialHairs;
+    public ShoeTypes ShoeTypes;
 
     public Sprite[] Signatures;
 
@@ -29,6 +30,12 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
         instance = this;
         _personContainer = new List<GameObject>();
+    }
+
+    public GameObject InstantiatePerson()
+    {
+        Attributes attr = Attributes.GetRandomAttr();
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

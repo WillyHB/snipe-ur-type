@@ -9,6 +9,7 @@ public class Person : MonoBehaviour
     [SerializeField] private Animator _bodyAnim;
     [SerializeField] private Animator _topAnim;
     [SerializeField] private Animator _bottomAnim;
+    [SerializeField] private Animator _shoeAnim;
     [SerializeField] private SpriteRenderer _hairRenderer;
     [SerializeField] private SpriteRenderer _beardRenderer;
 
@@ -24,8 +25,6 @@ public class Person : MonoBehaviour
     {
         _gameManager = GameManager.instance;
 
-        Attributes = Attributes.GetRandomAttr();
-
         _hairRenderer.sprite = Attributes.HairStyle.Sprite;
         _hairRenderer.color = Attributes.HairColor;
 
@@ -37,6 +36,7 @@ public class Person : MonoBehaviour
         _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
         _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
         _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+        _shoeAnim.runtimeAnimatorController = Attributes.ShoeType._animator;
 
         WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
     }
