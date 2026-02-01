@@ -27,7 +27,7 @@ public class Application : MonoBehaviour
     private bool hidden = true;
     void Start()
     {
-        if (!canHide) LeanTween.moveLocalY(Page, 0, 1f).setEaseOutQuad();
+        if (!canHide)LeanTween.moveLocalY(Page, 0, 1f).setEaseOutQuad();
         TMP_FontAsset font = Helpers.GetRandom(Fonts);
 
         Name.font = font;
