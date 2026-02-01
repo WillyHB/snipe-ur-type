@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // spawn initial number of people
+        personSpawn = FindPersonSpawnPoints();
     }
 
     // Update is called once per frame
@@ -61,4 +61,27 @@ public class GameManager : MonoBehaviour
         _personContainer.Add(person);
     }
         
+    public Vector2[] FindPersonSpawnPoints()
+    {
+        Camera cam = Camera.main;
+
+        float halfHeightY = cam.orthographicSize;
+        float halfWidthX = cam.orthographicSize * cam.aspect;
+
+        float ratio = 1.2f;
+
+        Vector2[] spawnPoints = new Vector2[]
+        {
+            new Vector2(-halfWidthX*ratio, -halfHeightY/ratio), // Left
+            new Vector2(-halfWidthX*ratio, 0), // Left
+            new Vector2(-halfWidthX*ratio, halfHeightY/ratio), // Left
+
+            
+            new Vector2(halfWidthX*ratio, -halfHeightY/ratio),  // Right
+            new Vector2(halfWidthX*ratio, 0),  // Right
+            new Vector2(halfWidthX*ratio, halfHeightY/ratio),  // Right
+        };
+
+        return spawnPoints;
+    }
 }
