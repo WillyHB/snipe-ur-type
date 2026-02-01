@@ -12,10 +12,7 @@ public class ButtonController : MonoBehaviour
 	}
 	public void GoQuit() { //quit button
 		UIAudio.instance.PlayClick();
-#if UNITY_EDITOR
-		UnityEditor.EditorApplication.isPlaying = false;
-#endif
-		
+		UnityEngine.Application.Quit();
 	} 
 	public void GoCredits() { //main menu credits button
 		UIAudio.instance.PlayClick();
