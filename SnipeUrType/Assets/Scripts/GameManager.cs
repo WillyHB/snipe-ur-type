@@ -12,17 +12,6 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
-    public BodyType Male, Female;
-    public BodyTypes SpecialBodyTypes;
-    public HairStyles HairStyles;
-    public EyeTypes EyeTypes;
-    public TopTypes TopTypes;
-    public BottomTypes BottomTypes;
-    public FacialHairs FacialHairs;
-    public ShoeTypes ShoeTypes;
-
-    public Sprite[] Signatures;
-
     private void Awake()
     {
         DontDestroyOnLoad(this);
