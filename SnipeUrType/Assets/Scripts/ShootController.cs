@@ -56,6 +56,10 @@ public class ShootController : MonoBehaviour
         {
             if (audioSource != null && missSfx != null) audioSource.PlayOneShot(missSfx);
             Debug.Log("Shot missed.");
+            Timer timer1 = FindFirstObjectByType<Timer>();
+            if (timer1 != null)
+                timer1.StopTimer();
+
             var s = FindFirstObjectByType<ScoringSystem>();
             Debug.Log("ScoringSystem is " + (s == null ? "NULL" : "FOUND"));
             s?.Miss();
@@ -73,6 +77,10 @@ public class ShootController : MonoBehaviour
         }
 
         if (audioSource != null && hitSfx != null) audioSource.PlayOneShot(hitSfx);
+        Timer timer = FindFirstObjectByType<Timer>();
+        if (timer != null)
+            timer.StopTimer();
+
         OnPersonShot?.Invoke(person);
 
         Debug.Log("About to flash hit marker, hitMarker is " + (hitMarker == null ? "NULL" : "SET"));

@@ -6,17 +6,23 @@ using System.Collections.Generic;
 public class CupidAccessory : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown dropdown;
-    public int pickedEntryIndex;
     public Image[] images;
 
     void Start()
     {
+        int saved = PlayerPrefs.GetInt("CupidAccessory", 0);
+        dropdown.value = saved;
         UpdateImages(dropdown.value);
     }
     public void GetDropdownValue()
     {
         UIAudio.instance.PlayClick();
-        UpdateImages(dropdown.value);
+
+        int value = dropdown.value;
+        PlayerPrefs.SetInt("CupidAccessory", value);
+        PlayerPrefs.Save();
+
+        UpdateImages(value);
     }
     void UpdateImages(int index)
     {

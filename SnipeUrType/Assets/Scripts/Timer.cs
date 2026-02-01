@@ -9,8 +9,12 @@ using TMPro;
 public class Timer: MonoBehaviour {
     public float targetTime = 60.0f;
     public TMP_Text timeText;
+    private bool isRunning = true;
 
     void Update() {
+
+        if (!isRunning) return;    
+
         targetTime -= Time.deltaTime;
         DisplayTime(targetTime);
         if (targetTime <= 10.0f) {
@@ -25,6 +29,11 @@ public class Timer: MonoBehaviour {
     void DisplayTime(float time) {
         int seconds = Mathf.CeilToInt(time);
         timeText.text = seconds.ToString();
+    }
+    
+    public void StopTimer()
+    {
+        isRunning = false;
     }
 
     void timerEnded() {

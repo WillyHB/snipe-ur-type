@@ -116,13 +116,23 @@ public class Applicant
     public static Applicant GetNewApplicant(bool getSpecial = false)
     {
         Attributes attr = Attributes.GetRandomAttr(getSpecial);
-        string hair = Helpers.GetRandom(attr.HairStyle.Descriptions);
-        string body = Helpers.GetRandom(attr.BodyType.Descriptions);
-        string shoe = Helpers.GetRandom(attr.ShoeType.Descriptions);
-        string top = Helpers.GetRandom(attr.TopType.Descriptions);
-        string bottom = Helpers.GetRandom(attr.BottomType.Descriptions);
-        string beard = attr.Female ? "Has no beard. None at all." : Helpers.GetRandom(attr.FacialHair.Descriptions);
-        string physical = attr.Special ? attr.SpecialBodyType.Descriptions[0] : hair + "\n" + body + "\n" + shoe + "\n" + top + "\n" + bottom + "\n" + beard;
+
+        string physical;
+
+        if (!attr.Special)
+        {
+            string hair = Helpers.GetRandom(attr.HairStyle.Descriptions);
+            string body = Helpers.GetRandom(attr.BodyType.Descriptions);
+            string shoe = Helpers.GetRandom(attr.ShoeType.Descriptions);
+            string top = Helpers.GetRandom(attr.TopType.Descriptions);
+            string bottom = Helpers.GetRandom(attr.BottomType.Descriptions);
+            string beard = attr.Female ? "Has no beard. None at all." : Helpers.GetRandom(attr.FacialHair.Descriptions);
+            physical = hair + "\n" + body + "\n" + shoe + "\n" + top + "\n" + bottom + "\n" + beard;
+        }
+        else
+        {
+            physical = attr.SpecialBodyType.Descriptions[0];
+        }
         return new()
         {
             IdealAttributes = attr,
