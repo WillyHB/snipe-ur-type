@@ -77,7 +77,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Person
   _rigidbody2D: {fileID: 3902908605008330023}
-  _gameManager: {fileID: 0}
+  _bodyAnim: {fileID: 7576447410706694576}
+  _topAnim: {fileID: 6090032803192955692}
+  _bottomAnim: {fileID: 7577641767746718824}
+  _hairRenderer: {fileID: 1730596733967565079}
+  _beardRenderer: {fileID: 0}
 --- !u!1 &3627232171724591490
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +172,7 @@ SpriteRenderer:
   m_Size: {x: 1.34, y: 1.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7577641767746718824
 Animator:
@@ -282,7 +286,7 @@ SpriteRenderer:
   m_Size: {x: 1.46, y: 3.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7576447410706694576
 Animator:
@@ -396,7 +400,7 @@ SpriteRenderer:
   m_Size: {x: 1.34, y: 1.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6090032803192955692
 Animator:
@@ -509,5 +513,5 @@ SpriteRenderer:
   m_Size: {x: 1.87, y: 1.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0

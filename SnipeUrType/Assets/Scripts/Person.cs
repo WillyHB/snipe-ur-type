@@ -4,11 +4,13 @@ using UnityEngine.Rendering;
 public class Person : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody2D;
-    [SerializeField] private GameManager _gameManager;
+    private GameManager _gameManager;
 
     [SerializeField] private Animator _bodyAnim;
     [SerializeField] private Animator _topAnim;
     [SerializeField] private Animator _bottomAnim;
+    [SerializeField] private SpriteRenderer _hairRenderer;
+    [SerializeField] private SpriteRenderer _beardRenderer;
 
     [SerializeField] private SortingGroup _sortingGroup;
 
@@ -20,33 +22,23 @@ public class Person : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //_gameManager = GameManager.instance;
+        _gameManager = GameManager.instance;
 
-        //Attributes = Attributes.GetRandomAttr();
+        Attributes = Attributes.GetRandomAttr();
 
-        //if (Attributes.Special)
-        //{
-        //    GameObject special = Instantiate(Attributes.SpecialBodyType.BodyPrefab, transform);
-        //    return;
-        //}
+        _hairRenderer.sprite = Attributes.HairStyle.Sprite;
+        _hairRenderer.color = Attributes.HairColor;
 
-        //Body body = Instantiate(Attributes.BodyType.BodyPrefab, transform).GetComponent<Body>();
+        _beardRenderer.sprite = Attributes.FacialHair.Sprite;
+        _beardRenderer.color = Attributes.HairColor;
 
-        //body.Renderer.color = Attributes.SkinColor;
+        transform.localScale = new Vector3(Attributes.Mass, Attributes.Height, 1);
 
-        //body.Hair.sprite = Attributes.HairStyle.Sprite;
-        //body.Hair.color = Attributes.HairColor;
+        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
+        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
 
-        //body.Eyes.sprite = Attributes.EyeType.Sprite;
-        //body.Eyes.color = Attributes.EyeColor;
-
-        //body.Freckles.enabled = Attributes.Freckles;
-
-        //_bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
-        //_topAnim.runtimeAnimatorController = Attributes.TopType._animator;
-        //_bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
-
-        //WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
+        WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
     }
     
     // Update is called once per frame

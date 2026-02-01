@@ -1,12 +1,8 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class ShootController : MonoBehaviour
 {
-    public static System.Action<Person> OnPersonShot;  
-    private bool hasShot;
-
+    public static System.Action<Person> OnPersonShot;    
     [Header("Raycast")]
     [SerializeField] private Camera cam;
     [SerializeField] private float maxDistance = 100f;
@@ -41,9 +37,6 @@ public class ShootController : MonoBehaviour
 
     private void Shoot()
     {
-        if (hasShot) return;
-        hasShot = true;
-
         if (cam == null)
         {
             Debug.LogError("ShootController: No camera assigned and no Camera.main found.");
@@ -59,9 +52,6 @@ public class ShootController : MonoBehaviour
         {
             if (audioSource != null && missSfx != null) audioSource.PlayOneShot(missSfx);
             Debug.Log("Shot missed.");
-            ScoreManager.status = 1;
-            SceneManager.LoadScene("Score");
-            FindFirstObjectByType<ScoringSystem>()?.Miss();
             return;
         }
 
@@ -71,7 +61,6 @@ public class ShootController : MonoBehaviour
         {
             if (audioSource != null && missSfx != null) audioSource.PlayOneShot(missSfx);
             Debug.Log($"Hit {hit.collider.name}, but it has no Person component.");
-            FindFirstObjectByType<ScoringSystem>()?.Miss();
             return;
         }
 
@@ -87,10 +76,6 @@ public class ShootController : MonoBehaviour
         foreach (var col in person.GetComponentsInChildren<Collider2D>())
             col.enabled = false;
 
-        ScoreManager.status = 2;
-        ScoreManager.score = 69;
-        SceneManager.LoadScene("Score");
-        Debug.Log($"HIT PERSON: {hit.collider.name} | HairType={person.Attributes.HairStyle} | Height={person.Attributes.Height} | Freckles={person.Attributes.Freckles}");
-     
+        Debug.Log($"HIT PERSON: {hit.collider.name} | HairType={person.Attributes.HairStyle} | Height={person.Attributes.Height}");
     }
 }
