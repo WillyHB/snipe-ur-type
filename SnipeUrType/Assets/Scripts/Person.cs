@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Person : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Person : MonoBehaviour
     [SerializeField] private Animator _bodyAnim;
     [SerializeField] private Animator _topAnim;
     [SerializeField] private Animator _bottomAnim;
+
+    [SerializeField] private SortingGroup _sortingGroup;
 
 
     private float walkSpeed = 1.0f;
@@ -50,6 +53,7 @@ public class Person : MonoBehaviour
     void Update()
     {
         // need to confirm with saad how to get shot
+        _sortingGroup.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
     }
 
     public void WalkToward(Vector2? direction = null)

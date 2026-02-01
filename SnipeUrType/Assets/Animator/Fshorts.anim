@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Women
+  m_Name: Fshorts
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 64098128392177724, guid: 7294b77e39af7c349843abe710ca86c0, type: 3}
+      value: {fileID: 21300000, guid: fca2483cffa4cfc4488decf164c7031c, type: 3}
     - time: 0.41666666
-      value: {fileID: 4500254310135990973, guid: aeac1513bf6c1464e82021a9142f0845, type: 3}
+      value: {fileID: 21300000, guid: bbb2c3a45b64a0042bc538b0e48f39cb, type: 3}
     - time: 0.8333333
-      value: {fileID: 64098128392177724, guid: 7294b77e39af7c349843abe710ca86c0, type: 3}
+      value: {fileID: 21300000, guid: fca2483cffa4cfc4488decf164c7031c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 64098128392177724, guid: 7294b77e39af7c349843abe710ca86c0, type: 3}
-    - {fileID: 4500254310135990973, guid: aeac1513bf6c1464e82021a9142f0845, type: 3}
-    - {fileID: 64098128392177724, guid: 7294b77e39af7c349843abe710ca86c0, type: 3}
+    - {fileID: 21300000, guid: fca2483cffa4cfc4488decf164c7031c, type: 3}
+    - {fileID: 21300000, guid: bbb2c3a45b64a0042bc538b0e48f39cb, type: 3}
+    - {fileID: 21300000, guid: fca2483cffa4cfc4488decf164c7031c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

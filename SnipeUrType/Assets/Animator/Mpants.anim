@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mdpants
+  m_Name: Mpants
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 5508283047454959123, guid: 7fae13088f352754289ac7465e7da484, type: 3}
+      value: {fileID: 21300000, guid: 45a637af340e33845aae42b8215a39fe, type: 3}
     - time: 0.41666666
-      value: {fileID: 4281348488750587304, guid: 450715c1066afbb4c9c13fe41540c1b9, type: 3}
+      value: {fileID: 21300000, guid: ff9f00c346baf654593cd83216849608, type: 3}
     - time: 0.8333333
-      value: {fileID: 5508283047454959123, guid: 7fae13088f352754289ac7465e7da484, type: 3}
+      value: {fileID: 21300000, guid: 45a637af340e33845aae42b8215a39fe, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 5508283047454959123, guid: 7fae13088f352754289ac7465e7da484, type: 3}
-    - {fileID: 4281348488750587304, guid: 450715c1066afbb4c9c13fe41540c1b9, type: 3}
-    - {fileID: 5508283047454959123, guid: 7fae13088f352754289ac7465e7da484, type: 3}
+    - {fileID: 21300000, guid: 45a637af340e33845aae42b8215a39fe, type: 3}
+    - {fileID: 21300000, guid: ff9f00c346baf654593cd83216849608, type: 3}
+    - {fileID: 21300000, guid: 45a637af340e33845aae42b8215a39fe, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
