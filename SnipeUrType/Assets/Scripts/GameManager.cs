@@ -8,14 +8,11 @@ public class GameManager : MonoBehaviour
 
     private float centerOffset = 2.0f;
 
-    private List<GameObject> _personContainer;
-    
     public static GameManager instance;
 
     private void Awake()
     {
         instance = this;
-        _personContainer = new List<GameObject>();
     }
 
 
@@ -27,7 +24,6 @@ public class GameManager : MonoBehaviour
         if (spawnPos.x > screenCenter.x && !person.TryGetComponent<Animator>(out Animator a))
             person.transform.rotation = Quaternion.Euler(0, 180, 0);
         person.Initialize(attr);
-        _personContainer.Add(person.gameObject);
         return person;
     }
 
