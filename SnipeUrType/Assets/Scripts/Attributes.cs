@@ -117,7 +117,6 @@ public class Attributes
             attr.FacialHair = GetRandom(DataManager.instance.FacialHairs.Styles);
         }
 
-        attr.ShoeType = GetRandom(DataManager.instance.ShoeTypes.Types.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
         attr.HairStyle = GetRandom(DataManager.instance.HairStyles.Styles.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
         attr.ShoeType = GetRandom(DataManager.instance.ShoeTypes.Types.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
         attr.BodyType = attr.Female ? DataManager.instance.Female : DataManager.instance.Male;
