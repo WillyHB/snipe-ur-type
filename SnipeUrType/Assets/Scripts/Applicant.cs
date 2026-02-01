@@ -121,7 +121,7 @@ public class Applicant
             City = Helpers.GetRandom(cities),
             Street = Helpers.GetRandom(streetNames),
             StreetNumber = Random.Range(1,1000),
-            Signature = GameManager.instance.Signatures[Random.Range(0, GameManager.instance.Signatures.Length)],
+            Signature = DataManager.instance.Signatures[Random.Range(0, DataManager.instance.Signatures.Length)],
         };
     }
 }

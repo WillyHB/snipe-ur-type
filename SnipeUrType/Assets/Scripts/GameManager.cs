@@ -12,20 +12,8 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
-    public BodyType Male, Female;
-    public BodyTypes SpecialBodyTypes;
-    public HairStyles HairStyles;
-    public EyeTypes EyeTypes;
-    public TopTypes TopTypes;
-    public BottomTypes BottomTypes;
-    public FacialHairs FacialHairs;
-    public ShoeTypes ShoeTypes;
-
-    public Sprite[] Signatures;
-
     private void Awake()
     {
-        DontDestroyOnLoad(this);
         instance = this;
         _personContainer = new List<GameObject>();
     }
@@ -35,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         Attributes attr = Attributes.GetRandomAttr();
         Vector2 spawnPos = GetRandomPersonSpawn();
-        Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? Female.BodyPrefab : Male.BodyPrefab), spawnPos, Quaternion.identity).GetComponent<Person>();
+        Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? DataManager.instance.Female.BodyPrefab : DataManager.instance.Male.BodyPrefab), spawnPos, Quaternion.identity).GetComponent<Person>();
         if ((spawnPos.x > screenCenter.x && !person.TryGetComponent<Animator>(out Animator a)) || (person.TryGetComponent<Animator>(out Animator b) && spawnPos.x < screenCenter.x))
         {
             person.transform.rotation = Quaternion.Euler(0, 180, 0);

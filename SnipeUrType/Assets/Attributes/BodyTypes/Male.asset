@@ -16,6 +16,6 @@ MonoBehaviour:
   BodyPrefab: {fileID: 6232599342557857502, guid: bb12d189376e0554e98f61ffc2c19e15, type: 3}
   AudioComment: {fileID: 8300000, guid: dd8ffbbab29e25be29bfe441688a0606, type: 3}
   Descriptions:
-  - Manly
-  - Not a woman
+  - Is manly
+  - Is not a woman
   _animator: {fileID: 9100000, guid: 9c2c5dac4455899418114e2d11b94184, type: 2}
