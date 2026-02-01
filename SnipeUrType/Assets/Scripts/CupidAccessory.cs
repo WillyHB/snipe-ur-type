@@ -15,6 +15,7 @@ public class CupidAccessory : MonoBehaviour
     }
     public void GetDropdownValue()
     {
+        UIAudio.instance.PlayClick();
         UpdateImages(dropdown.value);
     }
     void UpdateImages(int index)
