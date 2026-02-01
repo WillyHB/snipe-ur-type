@@ -42,13 +42,13 @@ public class Application : MonoBehaviour
             Physical.text = applicant.IdealAttributes.SpecialBodyType.Descriptions[0];
         } else
         {
-            Physical.text = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.ShoeType.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.TopType.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.BottomType.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.FacialHair.Descriptions) ?? "Has no beard" + "\n";
-
+            string hair = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions);
+            string body = Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions);
+            string shoe = Helpers.GetRandom(applicant.IdealAttributes.ShoeType.Descriptions);
+            string top = Helpers.GetRandom(applicant.IdealAttributes.TopType.Descriptions);
+            string bottom = Helpers.GetRandom(applicant.IdealAttributes.BottomType.Descriptions);
+            string beard = Helpers.GetRandom(applicant.IdealAttributes.ShoeType.Descriptions) ?? "Has no beard. None at all.";
+            Physical.text = hair + "\n" + body + "\n" + shoe + "\n" + top + "\n" + bottom + "\n" + beard;
         }
     }
 }

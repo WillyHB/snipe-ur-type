@@ -8,6 +8,7 @@ public class UIAudio : MonoBehaviour
     public AudioSource effects;
     public AudioClip hover;
     public AudioClip click;
+    public AudioClip swoosh;
 
     void Awake()
     {
@@ -28,6 +29,10 @@ public class UIAudio : MonoBehaviour
     public void PlayClick()
     {
         PlaySound(click);
+    }
+    public void PlaySwoosh()
+    {
+        PlaySound(swoosh);
     }
     public void PlaySound(AudioClip sound)
     {

@@ -7,27 +7,29 @@ using TMPro;
 
 
 public class Timer: MonoBehaviour {
-    public float targetTime = 120.0f;
+    public float targetTime = 60.0f;
     public TMP_Text timeText;
 
     void Update() {
         targetTime -= Time.deltaTime;
         DisplayTime(targetTime);
+        if (targetTime <= 10.0f) {
+            timeText.color = Color.red;
+            
+        }
         if (targetTime <= 0.0f) {
-            Debug.Log("times up!");
             timerEnded();
         }
     }
 
     void DisplayTime(float time) {
-        float minutes = Mathf.FloorToInt(time / 60);
-        float seconds = Mathf.FloorToInt(time % 60);
-
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        int seconds = Mathf.CeilToInt(time);
+        timeText.text = seconds.ToString();
     }
 
     void timerEnded() {
         Debug.Log("times up!");
         FindFirstObjectByType<ScoringSystem>()?.TimeUp();
+        SceneManager.LoadScene("Score");
     }
 }

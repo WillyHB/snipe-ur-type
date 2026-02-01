@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
                 PlayFailure();
                 break;
             default: //hit person
-                ShowText("Score: " + score.ToString());
+                ShowText("Score: " + score.ToString()+ "%");
                 if (score >= 50)
                 {
                     PlaySuccess();
