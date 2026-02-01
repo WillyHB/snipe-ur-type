@@ -7,7 +7,8 @@ public class ButtonController : MonoBehaviour
 {
 	public void GoAssignment() { //main menu start button, retry button
 		UIAudio.instance.PlayClick();
-		SceneManager.LoadScene("Assignment");
+		SceneManager.LoadScene("Application Test");
+		UIAudio.instance.PlaySwoosh();
 	}
 	public void GoQuit() { //quit button
 		UIAudio.instance.PlayClick();
