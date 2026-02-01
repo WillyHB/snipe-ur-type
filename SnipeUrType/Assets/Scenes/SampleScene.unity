@@ -397,52 +397,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1088283922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1088283924}
-  - component: {fileID: 1088283923}
-  m_Layer: 0
-  m_Name: Systems
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1088283923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088283922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ad7847c3ed0724aa1538cb214ff69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScoringSystem
-  resultsSceneName: Score
-  resultsDelay: 2
---- !u!4 &1088283924
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088283922}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68251, y: 0.31271, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102814979
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1458108373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -645,6 +599,7 @@ GameObject:
   - component: {fileID: 1458962320}
   - component: {fileID: 1458962319}
   - component: {fileID: 1458962321}
+  - component: {fileID: 1458962322}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -671,7 +626,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   crosshairUI: {fileID: 1102814980}
   hitMarker: {fileID: 1458108374}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1458962321}
   hitSfx: {fileID: 8300000, guid: 73b6bb4ea50b5c5d99a3cb7194fddb7a, type: 3}
   missSfx: {fileID: 8300000, guid: 73b6bb4ea50b5c5d99a3cb7194fddb7a, type: 3}
 --- !u!4 &1458962320
@@ -786,6 +741,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1458962322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458962318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ad7847c3ed0724aa1538cb214ff69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoringSystem
+  resultsSceneName: Score
+  resultsDelay: 2
+  audioSource: {fileID: 1458962321}
+  drumRoll: {fileID: 8300000, guid: dbe997c31b9b14044a583941be9ce82b, type: 3}
+  boo: {fileID: 8300000, guid: 2bfc1d7c43776464291c78c575738524, type: 3}
 --- !u!1 &1682602837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1006,5 @@ SceneRoots:
   - {fileID: 1458962320}
   - {fileID: 1682602841}
   - {fileID: 1965499497}
-  - {fileID: 1088283924}
   - {fileID: 509864165}
   - {fileID: 2065449028}
