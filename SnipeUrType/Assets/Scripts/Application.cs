@@ -37,9 +37,15 @@ public class Application : MonoBehaviour
         Physical.font = font;
         Personality.font = font;
 
-        applicant = Applicant.GetNewApplicant();
-        ApplicantSession.CurrentApplicant = applicant;
-        
+        if (ApplicantSession.CurrentApplicant == null)
+        {
+            applicant = Applicant.GetNewApplicant();
+            ApplicantSession.CurrentApplicant = applicant;
+        }else
+        {
+            applicant = ApplicantSession.CurrentApplicant;
+        }
+
         Name.text = applicant.FirstName + " "  + applicant.LastName;
         Address.text = applicant.StreetNumber + " " + applicant.Street;
         City.text = applicant.City;
