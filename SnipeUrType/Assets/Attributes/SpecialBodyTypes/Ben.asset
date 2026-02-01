@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Ben
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Ben
-  IsFemale: 0
-  BodyPrefab: {fileID: 0}
-  AudioComment: {fileID: 8300000, guid: a519a784f540eb243b5c1c6802be5431, type: 3}
+  BodyPrefab: {fileID: 4785566021085239904, guid: 9c8a4ee0edc4d0b4eb90227eb9f2a43a, type: 3}
+  AudioComment: {fileID: 8300000, guid: 340a5f76829e4e76fb4164fc61bb2816, type: 3}
   Descriptions:
-  - Asian baddie who is like really tall and cool
-  _animator: {fileID: 0}
+  - Asian baddie who is like really tall and cool and please don't tell Kaitlin I
+    sent this in
+  _animator: {fileID: 9100000, guid: a90765a6501f2d04280305e2730cc8dd, type: 2}

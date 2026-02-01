@@ -55,7 +55,7 @@ public class Application : MonoBehaviour
             string shoe = Helpers.GetRandom(applicant.IdealAttributes.ShoeType.Descriptions);
             string top = Helpers.GetRandom(applicant.IdealAttributes.TopType.Descriptions);
             string bottom = Helpers.GetRandom(applicant.IdealAttributes.BottomType.Descriptions);
-            string beard = Helpers.GetRandom(applicant.IdealAttributes.FacialHair.Descriptions) ?? "Has no beard. None at all.";
+            string beard = applicant.IdealAttributes.Female ? "Has no beard. None at all." : Helpers.GetRandom(applicant.IdealAttributes.FacialHair.Descriptions);
             Physical.text = hair + "\n" + body + "\n" + shoe + "\n" + top + "\n" + bottom + "\n" + beard;
         }
 

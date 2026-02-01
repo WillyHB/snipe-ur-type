@@ -71,7 +71,6 @@ public class ScoringSystem : MonoBehaviour
 
     private IEnumerator LoadResultsAfterDelay()
     {
-         Debug.Log(ScoreSession.status);
         if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
         {
             audioSource.PlayOneShot(drumRoll);

@@ -103,7 +103,7 @@ public class Attributes
         Attributes attr = new Attributes();
 
         attr.Personality = GetRandom(personalities);
-        attr.Special = Random.Range(0, 100) == 1;
+        attr.Special = true; //Random.Range(0, 100) == 1;
 
         if (attr.Special)
         {
