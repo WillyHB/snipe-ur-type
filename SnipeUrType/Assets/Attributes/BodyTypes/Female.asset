@@ -16,6 +16,6 @@ MonoBehaviour:
   BodyPrefab: {fileID: 903410043025890322, guid: 2ce3eca4acc6c5344ab7557ce6f63d3e, type: 3}
   AudioComment: {fileID: 8300000, guid: 974db6c6dec9dd3ab9ee006b3c654210, type: 3}
   Descriptions:
-  - Feminine
-  - 'Like just like like like erm '
+  - Is Feminine
+  - 'Like... nevermind '
   _animator: {fileID: 9100000, guid: 723e28f13c2f38e418472cf8966fc7ec, type: 2}
