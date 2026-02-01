@@ -6,6 +6,7 @@ public class ScoringSystem : MonoBehaviour
 {
     [SerializeField] private string resultsSceneName = "Score";
     [SerializeField] private float resultsDelay = 1f;
+    [SerializeField] private float hitDelay = 4f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip drumRoll;
     [SerializeField] private AudioClip boo;
@@ -75,14 +76,21 @@ public class ScoringSystem : MonoBehaviour
         GameCounter.Counter++;
         if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
         {
-            //audioSource.PlayOneShot(drumRoll);
+            audioSource.PlayOneShot(drumRoll);
+            yield return new WaitForSeconds(hitDelay);
+            SceneManager.LoadScene(resultsSceneName);
         }
         if (ScoreSession.status == 1 && audioSource != null && boo != null) 
         {
             audioSource.PlayOneShot(boo);
+            yield return new WaitForSeconds(resultsDelay);
+            SceneManager.LoadScene(resultsSceneName);
         }
-        yield return new WaitForSeconds(resultsDelay);
-        SceneManager.LoadScene(resultsSceneName);
+        if (ScoreSession.status == 0) 
+        {
+            yield return new WaitForSeconds(resultsDelay);
+            SceneManager.LoadScene(resultsSceneName);
+        }
     }
 
     private int ComputeScore(Attributes target, Attributes shot)
