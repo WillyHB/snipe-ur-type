@@ -74,7 +74,7 @@ public class ScoringSystem : MonoBehaviour
         ApplicantSession.CurrentApplicant = null;
         if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
         {
-            audioSource.PlayOneShot(drumRoll);
+            //audioSource.PlayOneShot(drumRoll);
         }
         if (ScoreSession.status == 1 && audioSource != null && boo != null) 
         {

@@ -6,6 +6,7 @@ public class ShootController : MonoBehaviour
 {
     public static System.Action<Person> OnPersonShot;  
     private bool hasShot;
+    public GameObject BgMusicGameObject;
 
     [Header("Raycast")]
     [SerializeField] private Camera cam;
@@ -37,6 +38,7 @@ public class ShootController : MonoBehaviour
     private void Shoot()
     {
         if (hasShot) return;
+        Destroy(BgMusicGameObject);
         hasShot = true;
 
         if (cam == null)
