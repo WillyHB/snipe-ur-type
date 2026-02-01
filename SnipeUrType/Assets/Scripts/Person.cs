@@ -16,13 +16,15 @@ public class Person : MonoBehaviour
 
     [SerializeField] private SortingGroup _sortingGroup;
 
-    private float walkSpeed = 1.0f;
+    private float walkSpeed;
 
     public Attributes Attributes { get; private set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Initialize(Attributes attr)
     {
+        walkSpeed = TryGetComponent<Animator>(out Animator a) ? Random.Range(1.2f, 2.5f) : Random.Range(0.8f, 2f);  // only horse has animator
+
         Attributes = attr;
 
         _gameManager = GameManager.instance;
