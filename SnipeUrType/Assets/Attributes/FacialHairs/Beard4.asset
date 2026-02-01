@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb2b0f817e599d44ac3bd192a78af76, type: 3}
+  m_Name: Beard4
+  m_EditorClassIdentifier: Assembly-CSharp::FacialHair
+  Name: Sheep Beard Thing
+  Sprite: {fileID: -6457777337406403471, guid: dd83fe6d70b800d40bb2c0cf7b38c422, type: 3}
+  Descriptions:
+  - Is built like a sheep

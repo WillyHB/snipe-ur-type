@@ -5,8 +5,6 @@ using System.Collections.Generic;
 
 public class ButtonController : MonoBehaviour
 {
-	public AudioSource cupidSound;
-
 	public void GoAssignment() { //main menu start button, retry button
 
 		SceneManager.LoadScene("Assignment");
@@ -23,10 +21,9 @@ public class ButtonController : MonoBehaviour
 	public void GoCupid() { //when u click on cupid!
 		//do something fun
 		Debug.Log("goo goo ga ga");
-		cupidSound.Play();
 	}
 	public void GoGamePlay() {//continue to assignment 
-		SceneManager.LoadScene("SampleScene");
+		SceneManager.LoadScene("GamePlay");
 	} 
 	public void GoMainMenu() { //return to main menu
 		SceneManager.LoadScene("MainMenu");

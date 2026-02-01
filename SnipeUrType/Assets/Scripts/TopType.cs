@@ -8,5 +8,7 @@ public class TopType : ScriptableObject
 
     public string[] Descriptions;
 
+    public bool Male, Female;
+
     public AnimatorController _animator;
 }
