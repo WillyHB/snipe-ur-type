@@ -12,10 +12,20 @@ public class Attributes
         new(245,215,171,255), // White
         new(245,215,171,255), // White
         new(245,215,171,255), // White
-        new(110,78,44,255), // Black
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
+        new(110,78,44,255), // Blackk
         new(64,129,217,255), // Blue
         new(71,207,48,255), // Green
         new(225,235,122,255), // Jaundice
+        new(243,245,219,255), // Pale
+        new(243,245,219,255), // Pale
+        new(243,245,219,255), // Pale
         new(243,245,219,255), // Pale
         new(232,175,216,255), // Pink
     };
@@ -23,10 +33,25 @@ public class Attributes
     private static readonly Color32[] HairColors =
     {
         new(206,232,99, 255), // Yellow Blonde
+        new(206,232,99, 255), // Yellow Blonde
+        new(206,232,99, 255), // Yellow Blonde
+        new(176,189,123,255), // Dirty Blonde
+        new(176,189,123,255), // Dirty Blonde
+        new(176,189,123,255), // Dirty Blonde
         new(176,189,123,255), // Dirty Blonde
         new(241,245,226, 255), // Fair Blonde / White
+        new(241,245,226, 255), // Fair Blonde / White
+        new(241,245,226, 255), // Fair Blonde / White
+        new(79,57,41, 255), // Brunette
+        new(79,57,41, 255), // Brunette
+        new(79,57,41, 255), // Brunette
         new(79,57,41, 255), // Brunette
         new(26,12,1,255), // Black
+        new(26,12,1,255), // Black
+        new(26,12,1,255), // Black
+        new(26,12,1,255), // Black
+        new(212,109,31,255), // Redhead
+        new(212,109,31,255), // Redhead
         new(212,109,31,255), // Redhead
         new(156,204,101,255), // Zorb
         new(108,48,232,255), // Blue
@@ -78,7 +103,7 @@ public class Attributes
         Attributes attr = new Attributes();
 
         attr.Personality = GetRandom(personalities);
-        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
+        attr.Special = Random.Range(0, 100) == 1;
 
         if (attr.Special)
         {
