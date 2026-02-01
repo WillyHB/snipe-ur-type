@@ -15,6 +15,7 @@ public class ShootController : MonoBehaviour
 
     [Header("Feedback")]
     [SerializeField] private HitMarkerFlash hitMarker;
+    [SerializeField] private GameObject LoveSplatter;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip hitSfx;
     [SerializeField] private AudioClip missSfx;
@@ -24,12 +25,6 @@ public class ShootController : MonoBehaviour
         if (cam == null) cam = Camera.main;
 
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
-    }
-
-// Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -88,6 +83,7 @@ public class ShootController : MonoBehaviour
         foreach (var col in person.GetComponentsInChildren<Collider2D>())
             col.enabled = false;
 
+        Instantiate(LoveSplatter, hit.transform.position, Quaternion.identity);
         Debug.Log($"HIT PERSON: {hit.collider.name} | HairType={person.Attributes.HairStyle} | Height={person.Attributes.Height}");
      
     }
