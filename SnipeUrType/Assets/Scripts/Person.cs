@@ -10,6 +10,7 @@ public class Person : MonoBehaviour
     [SerializeField] private Animator _topAnim;
     [SerializeField] private Animator _bottomAnim;
     [SerializeField] private Animator _shoeAnim;
+    [SerializeField] private SpriteRenderer _bodyRenderer;
     [SerializeField] private SpriteRenderer _hairRenderer;
     [SerializeField] private SpriteRenderer _beardRenderer;
 
@@ -26,11 +27,14 @@ public class Person : MonoBehaviour
 
         _gameManager = GameManager.instance;
         _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+          
         if (attr.Special) return;
         _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
         _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
         _shoeAnim.runtimeAnimatorController = Attributes.ShoeType._animator;
 
+
+        _bodyRenderer.color = Attributes.SkinColor;
         _hairRenderer.sprite = Attributes.HairStyle.Sprite;
         _hairRenderer.color = Attributes.HairColor;
 
