@@ -15,6 +15,8 @@ MonoBehaviour:
   Name: Womens Shorts
   Descriptions:
   - Likes showing their knees
+  - Is a huge fan of knee-showing
+  - If they were short I think a short wearing shorts as short shorts would be funny
   Male: 0
   Female: 1
   _animator: {fileID: 9100000, guid: 175c9e286c883124d9ce5ef40dec2b04, type: 2}

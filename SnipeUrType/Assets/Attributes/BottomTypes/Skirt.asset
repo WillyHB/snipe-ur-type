@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BottomType
   Name: Skirt
   Descriptions:
-  - Skirt?
+  - Wears a skirt
   Male: 0
   Female: 1
   _animator: {fileID: 9100000, guid: 47349a957b6df014b987bc7d689193f0, type: 2}

@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: Female Boots
   Descriptions:
   - Is always ready for any weather
+  - Doesn't let any puddle bother them!
   Male: 0
   Female: 1
   _animator: {fileID: 9100000, guid: e213ab2c81d3d36439e7e79cb95593ad, type: 2}
