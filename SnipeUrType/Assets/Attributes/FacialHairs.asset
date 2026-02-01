@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: FacialHairs
   m_EditorClassIdentifier: Assembly-CSharp::FacialHairs
   Styles:
-  - {fileID: 11400000, guid: 5b6578b704a52ef4299414ed05f35bd1, type: 2}
+  - {fileID: 11400000, guid: dd675948a0a10e648be1ab1c0a8dbc6f, type: 2}
+  - {fileID: 11400000, guid: 285d0e10253187b41897770877fa967c, type: 2}
+  - {fileID: 11400000, guid: 98593c946a7c54f4491c796c74d00e67, type: 2}
+  - {fileID: 11400000, guid: ae79f10dda0a38f4686fcf216062f0c9, type: 2}
+  - {fileID: 11400000, guid: fe9e0261c5dced44bb2431e8f1f16bd0, type: 2}

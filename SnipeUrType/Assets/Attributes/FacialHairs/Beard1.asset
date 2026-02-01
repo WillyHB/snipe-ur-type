@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb2b0f817e599d44ac3bd192a78af76, type: 3}
+  m_Name: Beard1
+  m_EditorClassIdentifier: Assembly-CSharp::FacialHair
+  Name: Thor Beard
+  Sprite: {fileID: 8554007878917862215, guid: 316561d1ef8c3034e9b039654c01ec80, type: 3}
+  Descriptions:
+  - Looks really thoughtful
+  - Looks like they'd enjoy eating mutton chops straight from the fire
