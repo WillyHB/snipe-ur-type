@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Male
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Man
-  IsFemale: 0
-  BodyPrefab: {fileID: 7564273408909604619, guid: 500f2d4f664063546b59fd12ac156151, type: 3}
+  BodyPrefab: {fileID: 6232599342557857502, guid: bb12d189376e0554e98f61ffc2c19e15, type: 3}
   AudioComment: {fileID: 8300000, guid: 89537eab9a6008243908ed92a33b9795, type: 3}
   Descriptions:
   - Manly

@@ -1474,9 +1474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd341ea8793e70489c3460efd0074ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  personSpawn: []
+  personSpawn:
+  - {x: 0, y: 0}
   screenCenter: {x: 0, y: 0}
-  personPrefab: {fileID: 0}
   Male: {fileID: 11400000, guid: 1865dbd6cb3da1840ae867247facf962, type: 2}
   Female: {fileID: 11400000, guid: e7e2923fca1daf44c94960f6cba12ece, type: 2}
   SpecialBodyTypes: {fileID: 11400000, guid: f2b889999ee910943a9ef9a09032c294, type: 2}

@@ -23,7 +23,13 @@ public class Person : MonoBehaviour
     public void Initialize(Attributes attr)
     {
         Attributes = attr;
+
         _gameManager = GameManager.instance;
+        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        if (attr.Special) return;
+        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
+        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+        _shoeAnim.runtimeAnimatorController = Attributes.ShoeType._animator;
 
         _hairRenderer.sprite = Attributes.HairStyle.Sprite;
         _hairRenderer.color = Attributes.HairColor;
@@ -36,14 +42,13 @@ public class Person : MonoBehaviour
 
         transform.localScale = new Vector3(Attributes.Mass, Attributes.Height, 1);
 
-        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
-        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
-        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
-        _shoeAnim.runtimeAnimatorController = Attributes.ShoeType._animator;
+    }
 
+    private void Start()
+    {
         WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
     }
-    
+
     // Update is called once per frame
     void Update()
     {

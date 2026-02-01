@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public Person SpawnPerson()
     {
         Attributes attr = Attributes.GetRandomAttr();
-        Person person = Instantiate(attr.Female ? Female.BodyPrefab : Male.BodyPrefab, GetRandomPersonSpawn(), Quaternion.identity).GetComponent<Person>();
+        Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? Female.BodyPrefab : Male.BodyPrefab), GetRandomPersonSpawn(), Quaternion.identity).GetComponent<Person>();
         person.Initialize(attr);
         _personContainer.Add(person.gameObject);
         return person;

@@ -72,7 +72,7 @@ public class Attributes
     {
         Attributes attr = new Attributes();
 
-        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
+        attr.Special = false;//Random.Range(0, 100) == 1;
         if (attr.Special)
         {
             attr.SpecialBodyType = GetRandom(GameManager.instance.SpecialBodyTypes.Types);
@@ -100,6 +100,7 @@ public class Attributes
         attr.Height = Random.Range(0.5f, 2f);
         attr.Mass = Random.Range(0.5f, 2f);
 
+        Debug.Log(attr);
         return attr;
     }
 }
