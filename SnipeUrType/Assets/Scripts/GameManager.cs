@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 
     private float centerOffset = 2.0f;
 
-    public List<GameObject> _personContainer;
-    
     public static GameManager instance;
 
     private void Awake()
@@ -103,36 +101,27 @@ public class GameManager : MonoBehaviour
     public void KeepOnly (Person keep)
     {
         roundResolved = true;
-        if (_personContainer == null) return;
+        GameObject[] persons = GameObject.FindGameObjectsWithTag("person");
 
-        for (int i = _personContainer.Count - 1; i>=0; i--)
+        keep.StopWalking();
+
+        for (int i = 0; i < persons.Length; i++)
         {
-            GameObject go = _personContainer[i];
-            if (go == null)
-            {
-                _personContainer.RemoveAt(i);
-                continue;
-            }
-            if (keep != null && go == keep.gameObject)
-            {    
-                keep.StopWalking();
-                continue;
-            }    
-            Destroy(go); 
-            _personContainer.RemoveAt(i);
+            if (keep != null && persons[i] == keep.gameObject) continue;
+            Destroy(persons[i]);
+
+
         }
     }
 
     public void ClearAllPeople()
     {
         roundResolved = true;
-        if (_personContainer == null) return;
+        GameObject[] persons = GameObject.FindGameObjectsWithTag("person");
 
-        for (int i = _personContainer.Count - 1; i >= 0; i --)
+        for (int i = 0; i < persons.Length; i++)
         {
-            GameObject go = _personContainer[i];
-            if (go != null) Destroy(go);
+            Destroy(persons[i]);
         }
-        _personContainer.Clear();
     }
 }
