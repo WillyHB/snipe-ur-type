@@ -15,6 +15,8 @@ MonoBehaviour:
   Name: Mens Shorts
   Descriptions:
   - Likes showing their knees
+  - Doesn't mind being a bit cold about the legs
+  - Would rather not wear pants, but does so... reluctantly...
   Male: 1
   Female: 0
   _animator: {fileID: 9100000, guid: 80a662c46f17c804c92a635d65aabf41, type: 2}

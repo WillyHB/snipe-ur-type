@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: Male Boots
   Descriptions:
   - Has warm toes
+  - Has dry toes
   Male: 1
   Female: 0
   _animator: {fileID: 9100000, guid: f5f21ce356c8e084c986b5857de4b274, type: 2}
