@@ -15,21 +15,24 @@ public class Person : MonoBehaviour
 
     [SerializeField] private SortingGroup _sortingGroup;
 
-
     private float walkSpeed = 1.0f;
 
     public Attributes Attributes { get; private set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Initialize(Attributes attr)
     {
+        Attributes = attr;
         _gameManager = GameManager.instance;
 
         _hairRenderer.sprite = Attributes.HairStyle.Sprite;
         _hairRenderer.color = Attributes.HairColor;
 
-        _beardRenderer.sprite = Attributes.FacialHair.Sprite;
-        _beardRenderer.color = Attributes.HairColor;
+        if (!Attributes.Female)
+        {
+            _beardRenderer.sprite = Attributes.FacialHair.Sprite;
+            _beardRenderer.color = Attributes.HairColor;
+        }
 
         transform.localScale = new Vector3(Attributes.Mass, Attributes.Height, 1);
 
