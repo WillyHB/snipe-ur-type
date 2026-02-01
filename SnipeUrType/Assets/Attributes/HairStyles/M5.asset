@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53e2730f85959ff40b5cad052a304b37, type: 3}
-  m_Name: F1
+  m_Name: M5
   m_EditorClassIdentifier: Assembly-CSharp::HairStyle
-  Name: Female Short Wavy Hairstyle
-  Sprite: {fileID: -6361163459103708668, guid: f0f658dcbc3c3c64f90faa3191818766, type: 3}
-  Male: 0
-  Female: 1
+  Name: Male Long Hair
+  Sprite: {fileID: 6000303112480256247, guid: 29d63dd026a491a4cb4de4549d405045, type: 3}
+  Male: 1
+  Female: 0
   Descriptions:
-  - Has short hair.
+  - Looks like a woman but he is not
+  - Just let's it grow

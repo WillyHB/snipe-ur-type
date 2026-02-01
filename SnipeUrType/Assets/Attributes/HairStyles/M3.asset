@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53e2730f85959ff40b5cad052a304b37, type: 3}
-  m_Name: F1
+  m_Name: M3
   m_EditorClassIdentifier: Assembly-CSharp::HairStyle
-  Name: Female Short Wavy Hairstyle
-  Sprite: {fileID: -6361163459103708668, guid: f0f658dcbc3c3c64f90faa3191818766, type: 3}
-  Male: 0
-  Female: 1
+  Name: Male Bach Hair
+  Sprite: {fileID: 6695424398814120764, guid: df9ba2e6b0fe5254cb0d6af5f11cf1f1, type: 3}
+  Male: 1
+  Female: 0
   Descriptions:
-  - Has short hair.
+  - Has just an amazing head of hair
+  - Has really lucious locks

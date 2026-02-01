@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53e2730f85959ff40b5cad052a304b37, type: 3}
-  m_Name: F1
+  m_Name: M4
   m_EditorClassIdentifier: Assembly-CSharp::HairStyle
-  Name: Female Short Wavy Hairstyle
-  Sprite: {fileID: -6361163459103708668, guid: f0f658dcbc3c3c64f90faa3191818766, type: 3}
-  Male: 0
-  Female: 1
+  Name: Male Bun Hair
+  Sprite: {fileID: -922487773674154056, guid: fc72857b9e6b30f4e80e8282b7f1a066, type: 3}
+  Male: 1
+  Female: 0
   Descriptions:
-  - Has short hair.
+  - Looks like they'd like eating buns
+  - Has a man bun hell yeah
