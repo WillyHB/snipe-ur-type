@@ -30,7 +30,7 @@ public class Person : MonoBehaviour
         _gameManager = GameManager.instance;
 
         if (TryGetComponent<stebe>(out stebe s)) return;
-        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        _bodyAnim.runtimeAnimatorController = attr.Special ? Attributes.SpecialBodyType._animator : Attributes.BodyType._animator;
           
         if (attr.Special) return;
         _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
