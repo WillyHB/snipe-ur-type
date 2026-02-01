@@ -29,6 +29,7 @@ public class kjs : MonoBehaviour
 
         if (Time.time - timer > 3.9f)
         {
+            ScoreManager.score = 3;
             SceneManager.LoadScene("MainMenu");
         }
     }
