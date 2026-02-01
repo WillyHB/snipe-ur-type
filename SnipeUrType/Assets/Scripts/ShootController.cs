@@ -75,11 +75,12 @@ public class ShootController : MonoBehaviour
             return;
         }
 
+        if (audioSource != null && hitSfx != null) audioSource.PlayOneShot(hitSfx);
         OnPersonShot?.Invoke(person);
 
         Debug.Log("About to flash hit marker, hitMarker is " + (hitMarker == null ? "NULL" : "SET"));
         if (hitMarker != null) hitMarker.Flash();
-        if (audioSource != null && hitSfx != null) audioSource.PlayOneShot(hitSfx);
+        
 
         var vis = person.GetComponentInChildren<NPCVisual>();
         if (vis != null) vis.SetTagged(true);
