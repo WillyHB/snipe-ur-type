@@ -83,6 +83,10 @@ public class Person : MonoBehaviour
         //_animator.SetBool("isWalking", false);
 
         _rigidbody2D.linearVelocity = Vector2.zero;
+        if (_bodyAnim != null) _bodyAnim.enabled = false;
+        if (_topAnim != null) _topAnim.enabled = false;
+        if (_bottomAnim != null) _bottomAnim.enabled = false;
+        if (_shoeAnim != null) _shoeAnim.enabled = false;
     }
 
     private void OnBecameInvisible()    // Destroy person when they leave the screen    

@@ -1332,8 +1332,8 @@ MonoBehaviour:
   hitMarker: {fileID: 1458108374}
   LoveSplatter: {fileID: 4246692761741306695, guid: 8d86ef3dc45e65548889e1f2bd64c91a, type: 3}
   audioSource: {fileID: 1458962321}
-  hitSfx: {fileID: 8300000, guid: 73b6bb4ea50b5c5d99a3cb7194fddb7a, type: 3}
-  missSfx: {fileID: 8300000, guid: 73b6bb4ea50b5c5d99a3cb7194fddb7a, type: 3}
+  hitSfx: {fileID: 8300000, guid: 2bc0ac2ce7dd5f8439a08f2c21446d23, type: 3}
+  missSfx: {fileID: 8300000, guid: 2bc0ac2ce7dd5f8439a08f2c21446d23, type: 3}
 --- !u!4 &1458962320
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,8 +1461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoringSystem
   resultsSceneName: Score
   resultsDelay: 2
+  hitDelay: 4
   audioSource: {fileID: 1458962321}
-  drumRoll: {fileID: 8300000, guid: dbe997c31b9b14044a583941be9ce82b, type: 3}
+  drumRoll: {fileID: 8300000, guid: 3344d6a47dad9e947809a17dc74a43ff, type: 3}
   boo: {fileID: 8300000, guid: 2bfc1d7c43776464291c78c575738524, type: 3}
 --- !u!1 &1682602837
 GameObject:
