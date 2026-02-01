@@ -12,17 +12,6 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
-    public BodyType Male, Female;
-    public BodyTypes SpecialBodyTypes;
-    public HairStyles HairStyles;
-    public EyeTypes EyeTypes;
-    public TopTypes TopTypes;
-    public BottomTypes BottomTypes;
-    public FacialHairs FacialHairs;
-    public ShoeTypes ShoeTypes;
-
-    public Sprite[] Signatures;
-
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -34,7 +23,10 @@ public class GameManager : MonoBehaviour
     public Person SpawnPerson()
     {
         Attributes attr = Attributes.GetRandomAttr();
-        Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? Female.BodyPrefab : Male.BodyPrefab), GetRandomPersonSpawn(), Quaternion.identity).GetComponent<Person>();
+        Person person = Instantiate(
+            attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? DataManager.instance.Female.BodyPrefab : DataManager.instance.Male.BodyPrefab), 
+            GetRandomPersonSpawn(), 
+            Quaternion.identity).GetComponent<Person>();
         person.Initialize(attr);
         _personContainer.Add(person.gameObject);
         return person;
