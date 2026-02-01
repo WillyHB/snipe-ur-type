@@ -16,10 +16,12 @@ public class Application : MonoBehaviour
 
     public TextMeshProUGUI Physical;
     public TextMeshProUGUI Personality;
+    public GameObject Page;
 
     public TMP_FontAsset[] Fonts;
     void Start()
     {
+        LeanTween.moveLocalY(Page, 0, 1f).setEaseOutQuad();
         TMP_FontAsset font = Helpers.GetRandom(Fonts);
 
         Name.font = font;
