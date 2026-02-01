@@ -26,6 +26,8 @@ public class Person : MonoBehaviour
         Attributes = attr;
 
         _gameManager = GameManager.instance;
+
+        if (GetComponent<stebe>()) return;
         _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
           
         if (attr.Special) return;

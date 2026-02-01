@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6353955822748897706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.90556, y: 0.6124, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80,6 +80,7 @@ MonoBehaviour:
   _topAnim: {fileID: 0}
   _bottomAnim: {fileID: 0}
   _shoeAnim: {fileID: 0}
+  _bodyRenderer: {fileID: 0}
   _hairRenderer: {fileID: 0}
   _beardRenderer: {fileID: 0}
   _sortingGroup: {fileID: 4318751837925968306}

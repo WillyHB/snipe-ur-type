@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Steve
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
   Name: Steve
-  IsFemale: 0
-  BodyPrefab: {fileID: 0}
-  AudioComment: {fileID: 8300000, guid: 8a011dd696025574babb1bb699f37d6c, type: 3}
+  BodyPrefab: {fileID: 6353955822748897706, guid: 7f85c08c56c7c6b4abf332c7f9a4e2c9, type: 3}
+  AudioComment: {fileID: 8300000, guid: 31444fe3ca4c0238f950475c43ad54bc, type: 3}
   Descriptions:
   - Real square guy. 2 Meters minimum AND maximum. I want no less.
   _animator: {fileID: 0}
