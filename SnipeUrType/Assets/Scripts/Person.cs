@@ -23,8 +23,8 @@ public class Person : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Initialize(Attributes attr)
     {
-        walkSpeed = TryGetComponent<Animator>(out Animator a) ? Random.Range(1.2f, 2.5f) : Random.Range(0.8f, 2f);  // only horse has animator
-
+        walkSpeed = attr.Special ? Random.Range(1.6f, 3.5f) : Random.Range(1f, 2.5f); 
+        
         Attributes = attr;
 
         _gameManager = GameManager.instance;

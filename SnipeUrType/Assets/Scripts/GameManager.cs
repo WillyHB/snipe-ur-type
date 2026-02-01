@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public void SetRoundResolved(bool value) => roundResolved = value;
     [SerializeField] private Vector2 screenCenter;
 
-    private float centerOffset = 2.0f;
+    private float centerOffset = 1.0f;
 
     public static GameManager instance;
 
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         Attributes attr = Attributes.GetRandomAttr();
         Vector2 spawnPos = GetRandomPersonSpawn();
         Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? DataManager.instance.Female.BodyPrefab : DataManager.instance.Male.BodyPrefab), spawnPos, Quaternion.identity).GetComponent<Person>();
-        if (spawnPos.x > 0) person.transform.Rotate(Vector3.up * 180);
+        if ((spawnPos.x > 0 && !attr.Special) || spawnPos.x < 0 && attr.Special) person.transform.Rotate(Vector3.up * 180);
         person.Initialize(attr);
         return person;
     }
@@ -62,9 +62,10 @@ public class GameManager : MonoBehaviour
 
     public Vector3 GetRandomPersonSpawn()
     {
-        int index = Random.Range(0, personSpawn.Length);
-        Vector2 spawnPoint = personSpawn[index];
-        return new Vector3(spawnPoint.x + screenCenter.x, spawnPoint.y + screenCenter.y, 0);
+        Camera cam = Camera.main;
+
+        float choice = Random.Range(0, 2) == 1 ? 1 : -1;
+        return new Vector3(choice*(cam.orthographicSize * cam.aspect + 5), Random.Range(-cam.orthographicSize, cam.orthographicSize-1), 0);
     }
 
     public Vector2 GetWalkDirection(Vector3 personPosition)
