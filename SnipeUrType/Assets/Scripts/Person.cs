@@ -9,38 +9,46 @@ public class Person : MonoBehaviour
     [SerializeField] private Animator _bodyAnim;
     [SerializeField] private Animator _topAnim;
     [SerializeField] private Animator _bottomAnim;
+    [SerializeField] private Animator _shoeAnim;
     [SerializeField] private SpriteRenderer _hairRenderer;
     [SerializeField] private SpriteRenderer _beardRenderer;
 
     [SerializeField] private SortingGroup _sortingGroup;
-
 
     private float walkSpeed = 1.0f;
 
     public Attributes Attributes { get; private set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Initialize(Attributes attr)
     {
-        _gameManager = GameManager.instance;
+        Attributes = attr;
 
-        Attributes = Attributes.GetRandomAttr();
+        _gameManager = GameManager.instance;
+        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        if (attr.Special) return;
+        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
+        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+        _shoeAnim.runtimeAnimatorController = Attributes.ShoeType._animator;
 
         _hairRenderer.sprite = Attributes.HairStyle.Sprite;
         _hairRenderer.color = Attributes.HairColor;
 
-        _beardRenderer.sprite = Attributes.FacialHair.Sprite;
-        _beardRenderer.color = Attributes.HairColor;
+        if (!Attributes.Female)
+        {
+            _beardRenderer.sprite = Attributes.FacialHair.Sprite;
+            _beardRenderer.color = Attributes.HairColor;
+        }
 
         transform.localScale = new Vector3(Attributes.Mass, Attributes.Height, 1);
 
-        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
-        _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
-        _bottomAnim.runtimeAnimatorController = Attributes.BottomType._animator;
+    }
 
+    private void Start()
+    {
         WalkToward();   // this will make the person start walking immediately upon spawn toward ~ center
     }
-    
+
     // Update is called once per frame
     void Update()
     {

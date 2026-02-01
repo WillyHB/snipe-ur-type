@@ -69,11 +69,9 @@ public class ScoringSystem : MonoBehaviour
 
         Count(shot.HairStyle == target.HairStyle);
         Count(shot.BodyType == target.BodyType);
-        Count(shot.EyeType == target.EyeType);
         Count(shot.FacialHair == target.FacialHair);
         Count(shot.TopType == target.TopType);
         Count(shot.BottomType == target.BottomType);
-        Count(shot.Freckles == target.Freckles);
         Count(shot.Special == target.Special);
 
         if (target.Special)
@@ -84,7 +82,6 @@ public class ScoringSystem : MonoBehaviour
 
         Count(ColorDistance(shot.HairColor, target.HairColor) <= 0.15f);
         Count(ColorDistance(shot.SkinColor, target.SkinColor) <= 0.15f);
-        Count(ColorDistance(shot.EyeColor, target.EyeColor) <= 0.15f);
 
         Count(shot.Personality == target.Personality);
 

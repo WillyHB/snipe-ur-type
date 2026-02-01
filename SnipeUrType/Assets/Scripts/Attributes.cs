@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using static Helpers;
 
@@ -53,6 +54,7 @@ public class Attributes
     public TopType TopType { get; private set; }
     public BottomType BottomType { get; private set; }
     public FacialHair FacialHair { get; private set; }
+    public ShoeType ShoeType { get; private set; }
 
     public float Height { get; private set; }
     public float Mass { get; private set; }
@@ -61,32 +63,44 @@ public class Attributes
     public Color SkinColor { get; private set; }
 
     public bool Special { get; private set; }
+    public bool Female { get; private set; } // #Equality
     public BodyType SpecialBodyType { get; private set; }
 
     public string Personality { get; private set; }
-
-    public Attributes() { }
 
     public static Attributes GetRandomAttr()
     {
         Attributes attr = new Attributes();
 
-        attr.HairStyle = GetRandom(GameManager.instance.HairStyles.Styles);
-        attr.BodyType = GetRandom(GameManager.instance.BodyTypes.Types);
-        attr.FacialHair = GetRandom(GameManager.instance.FacialHairs.Styles);
-        attr.TopType = GetRandom(GameManager.instance.TopTypes.Types);
-        attr.BottomType = GetRandom(GameManager.instance.BottomTypes.Types);
+        attr.Special = false;//Random.Range(0, 100) == 1;
+        if (attr.Special)
+        {
+            attr.SpecialBodyType = GetRandom(GameManager.instance.SpecialBodyTypes.Types);
+            attr.Personality = GetRandom(personalities);
+            return attr;
+        }
+        attr.Female = Random.Range(0f, 1f) < 0.5;
+
+        if (!attr.Female)
+        {
+            attr.FacialHair = GetRandom(GameManager.instance.FacialHairs.Styles);
+        }
+
+        attr.ShoeType = GetRandom(GameManager.instance.ShoeTypes.Types.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
+        attr.HairStyle = GetRandom(GameManager.instance.HairStyles.Styles.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
+        attr.ShoeType = GetRandom(GameManager.instance.ShoeTypes.Types.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
+        attr.BodyType = attr.Female ? GameManager.instance.Female : GameManager.instance.Male;
+        attr.TopType = GetRandom(GameManager.instance.TopTypes.Types.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
+        attr.BottomType = GetRandom(GameManager.instance.BottomTypes.Types.Where(t => (t.Male && !attr.Female)||(t.Female&&attr.Female)).ToArray());
 
         attr.HairColor = GetRandom(HairColors);
         attr.SkinColor = GetRandom(SkinColors);
 
-        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
-        attr.SpecialBodyType = GetRandom(GameManager.instance.SpecialBodyTypes.Types);
 
         attr.Height = Random.Range(0.5f, 2f);
         attr.Mass = Random.Range(0.5f, 2f);
-        attr.Personality = GetRandom(personalities);
 
+        Debug.Log(attr);
         return attr;
     }
 }
