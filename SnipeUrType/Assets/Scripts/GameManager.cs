@@ -36,8 +36,10 @@ public class GameManager : MonoBehaviour
         Attributes attr = Attributes.GetRandomAttr();
         Vector2 spawnPos = GetRandomPersonSpawn();
         Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? Female.BodyPrefab : Male.BodyPrefab), spawnPos, Quaternion.identity).GetComponent<Person>();
-        if (spawnPos.x > screenCenter.x && !person.TryGetComponent<Animator>(out Animator a))
+        if ((spawnPos.x > screenCenter.x && !person.TryGetComponent<Animator>(out Animator a)) || (person.TryGetComponent<Animator>(out Animator b) && spawnPos.x < screenCenter.x))
+        {
             person.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
         person.Initialize(attr);
         _personContainer.Add(person.gameObject);
         return person;
