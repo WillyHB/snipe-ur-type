@@ -6,21 +6,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Vector2[] personSpawn;
     [SerializeField] private Vector2 screenCenter;
 
-    [SerializeField] private GameObject personPrefab;
-
     private float centerOffset = 2.0f;
 
     private List<GameObject> _personContainer;
     
     public static GameManager instance;
 
-    public BodyTypes BodyTypes;
+    public BodyType Male, Female;
     public BodyTypes SpecialBodyTypes;
     public HairStyles HairStyles;
     public EyeTypes EyeTypes;
     public TopTypes TopTypes;
     public BottomTypes BottomTypes;
     public FacialHairs FacialHairs;
+    public ShoeTypes ShoeTypes;
 
     public Sprite[] Signatures;
 
@@ -28,12 +27,26 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
         instance = this;
+        _personContainer = new List<GameObject>();
+    }
+
+
+    public Person SpawnPerson()
+    {
+        Attributes attr = Attributes.GetRandomAttr();
+        Person person = Instantiate(attr.Special ? attr.SpecialBodyType.BodyPrefab : (attr.Female ? Female.BodyPrefab : Male.BodyPrefab), GetRandomPersonSpawn(), Quaternion.identity).GetComponent<Person>();
+        person.Initialize(attr);
+        _personContainer.Add(person.gameObject);
+        return person;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         personSpawn = FindPersonSpawnPoints();
+        SpawnPerson();
+        SpawnPerson();
+        // spawn initial number of people
     }
 
     // Update is called once per frame
@@ -53,12 +66,6 @@ public class GameManager : MonoBehaviour
     { 
         Vector2 target = new Vector2(screenCenter.x + Random.Range(-centerOffset, centerOffset), screenCenter.y + Random.Range(-centerOffset, centerOffset));
         return (target - new Vector2(personPosition.x, personPosition.y)).normalized;
-    }
-
-    public void SpawnPerson()
-    {
-        GameObject person = Instantiate(personPrefab, GetRandomPersonSpawn(), Quaternion.identity);
-        _personContainer.Add(person);
     }
         
     public Vector2[] FindPersonSpawnPoints()

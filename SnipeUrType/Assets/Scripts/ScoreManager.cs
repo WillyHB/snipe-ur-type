@@ -9,14 +9,20 @@ public class ScoreManager : MonoBehaviour
 //play successful music upon score 50% or more
 //play failure music otherwise
 {
-    public int status; //0 if out of time, 1 if missed, 2 if hit
-    public int score; //from 0 to 100
+    public static int status; //0 if out of time, 1 if missed, 2 if hit
+    public static int score; //from 0 to 100
     public TextMeshProUGUI display;
     public AudioSource success;
     public AudioSource failure;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log($"Score scene cursor: visible={Cursor.visible}, lock ={Cursor.lockState}");
+        status = ScoreSession.status;
+        score = ScoreSession.score;
+
         switch(status)
         {
             case 0:

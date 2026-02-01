@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e2730f85959ff40b5cad052a304b37, type: 3}
+  m_Name: F1
+  m_EditorClassIdentifier: Assembly-CSharp::HairStyle
+  Name: Female Short Wavy Hairstyle
+  Sprite: {fileID: -6361163459103708668, guid: f0f658dcbc3c3c64f90faa3191818766, type: 3}
+  Male: 0
+  Female: 1
+  Descriptions:
+  - Has short hair.

@@ -13,4 +13,15 @@ MonoBehaviour:
   m_Name: HairStyles
   m_EditorClassIdentifier: Assembly-CSharp::HairStyles
   Styles:
-  - {fileID: 11400000, guid: 35b654eeffddfe74d818a170b4d8dc10, type: 2}
+  - {fileID: 11400000, guid: 75b7aa0586ce9cd4b8391eb52ddcfcf7, type: 2}
+  - {fileID: 11400000, guid: 908eb0733ca40484ba41dc358b8aff1a, type: 2}
+  - {fileID: 11400000, guid: 7975815da749ef54ca49c71b85b251bb, type: 2}
+  - {fileID: 11400000, guid: 379621d73eed08645b137181a714e555, type: 2}
+  - {fileID: 11400000, guid: 29e49d4c715893e4ebfcedd08b12308f, type: 2}
+  - {fileID: 11400000, guid: 19cb1aac872523b4d9e03093f4cc5d6b, type: 2}
+  - {fileID: 11400000, guid: 5683f20f09702bc46a18025d79a97139, type: 2}
+  - {fileID: 11400000, guid: cb716085925cbbb4a92bdca0268206d0, type: 2}
+  - {fileID: 11400000, guid: a88353ab9141b594ca9453d4cad010ab, type: 2}
+  - {fileID: 11400000, guid: 468ece33f53167a49abf774ece0cc554, type: 2}
+  - {fileID: 11400000, guid: b47ab43cbf2f1cb4f9f532178c203d31, type: 2}
+  - {fileID: 11400000, guid: eff45f92f8a786541b7f631d3534f93c, type: 2}

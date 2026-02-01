@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423666388e0610a498ea2b2b963b2c2d, type: 3}
   m_Name: Steve
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
-  Name: 
+  Name: Steve
   IsFemale: 0
   BodyPrefab: {fileID: 0}
-  AudioComment: {fileID: 0}
-  Descriptions: []
+  AudioComment: {fileID: 8300000, guid: 8a011dd696025574babb1bb699f37d6c, type: 3}
+  Descriptions:
+  - Real square guy. 2 Meters minimum AND maximum. I want no less.
   _animator: {fileID: 0}
