@@ -4,18 +4,23 @@ using static Helpers;
 
 public class Attributes
 {
-    private static Color32[] SkinColors =
+    private static readonly Color32[] SkinColors =
     {
-        new Color(232,231,178,255), // White
-        new Color(110,78,44,255), // Black
-        new Color(64,129,217,255), // Blue
-        new Color(71,207,48,255), // Green
-        new Color(225,235,122,255), // Jaundice
-        new Color(243,245,219,255), // Pale
-        new Color(232,175,216,255), // Pink
+        new(245,215,171,255), // White
+        new(245,215,171,255), // White
+        new(245,215,171,255), // White
+        new(245,215,171,255), // White
+        new(245,215,171,255), // White
+        new(245,215,171,255), // White
+        new(110,78,44,255), // Black
+        new(64,129,217,255), // Blue
+        new(71,207,48,255), // Green
+        new(225,235,122,255), // Jaundice
+        new(243,245,219,255), // Pale
+        new(232,175,216,255), // Pink
     };
 
-    private static Color32[] HairColors =
+    private static readonly Color32[] HairColors =
     {
         new(206,232,99, 255), // Yellow Blonde
         new(176,189,123,255), // Dirty Blonde
@@ -23,7 +28,7 @@ public class Attributes
         new(79,57,41, 255), // Brunette
         new(26,12,1,255), // Black
         new(212,109,31,255), // Redhead
-        new(48,232,79, 255), // Green
+        new(156,204,101,255), // Zorb
         new(108,48,232,255), // Blue
         new(232,48,48,255), // Red
     };
@@ -59,8 +64,8 @@ public class Attributes
     public float Height { get; private set; }
     public float Mass { get; private set; }
 
-    public Color HairColor { get; private set; }
-    public Color SkinColor { get; private set; }
+    public Color32 HairColor { get; private set; }
+    public Color32 SkinColor { get; private set; }
 
     public bool Special { get; private set; }
     public bool Female { get; private set; } // #Equality
@@ -97,10 +102,9 @@ public class Attributes
         attr.SkinColor = GetRandom(SkinColors);
 
 
-        attr.Height = Random.Range(0.5f, 2f);
-        attr.Mass = Random.Range(0.5f, 2f);
+        attr.Height = Random.Range(0.75f, 1.5f);
+        attr.Mass = Random.Range(0.75f, 1.5f);
 
-        Debug.Log(attr);
         return attr;
     }
 }

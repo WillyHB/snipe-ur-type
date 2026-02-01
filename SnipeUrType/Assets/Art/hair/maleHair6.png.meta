@@ -120,8 +120,8 @@ TextureImporter:
         y: 1359
         width: 213
         height: 294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.46, y: 0.52}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
