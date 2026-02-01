@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(cam.aspect);
         Vector2[] spawnPoints = new Vector2[]
         {
-            new Vector2(cam.orthographicSize * cam.aspect + 5, Random.Range(-cam.orthographicSize, cam.orthographicSize)),
+            //new Vector2(cam.orthographicSize * cam.aspect + 5, Random.Range(-cam.orthographicSize, cam.orthographicSize)),
             new Vector2(-cam.orthographicSize * cam.aspect - 5, Random.Range(-cam.orthographicSize, cam.orthographicSize)),
             new Vector2(Random.Range(-cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect), cam.orthographicSize+5),
             new Vector2(Random.Range(-cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect), -cam.orthographicSize-5),
