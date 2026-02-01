@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Helpers;
 
 public class Attributes
 {
@@ -49,7 +50,6 @@ public class Attributes
 
     public HairStyle HairStyle { get; private set; }
     public BodyType BodyType { get; private set; }
-    public EyeType EyeType { get; private set; }
     public TopType TopType { get; private set; }
     public BottomType BottomType { get; private set; }
     public FacialHair FacialHair { get; private set; }
@@ -59,10 +59,6 @@ public class Attributes
 
     public Color HairColor { get; private set; }
     public Color SkinColor { get; private set; }
-    public Color EyeColor { get; private set; }
-
-
-    public bool Freckles { get; private set; }
 
     public bool Special { get; private set; }
     public BodyType SpecialBodyType { get; private set; }
@@ -75,26 +71,21 @@ public class Attributes
     {
         Attributes attr = new Attributes();
 
-        attr.HairStyle = Helpers.GetRandom(GameManager.instance.HairStyles.Styles);
-        attr.BodyType = Helpers.GetRandom(GameManager.instance.BodyTypes.Types);
-        attr.EyeType = Helpers.GetRandom(GameManager.instance.EyeTypes.Types);
-        attr.FacialHair = Helpers.GetRandom(GameManager.instance.FacialHairs.Styles);
-        /*
-        attr.TopType = Helpers.GetRandom(GameManager.instance.TopTypes.Types);
-        attr.BottomType = Helpers.GetRandom(GameManager.instance.BottomTypes.Types);
-        */
+        attr.HairStyle = GetRandom(GameManager.instance.HairStyles.Styles);
+        attr.BodyType = GetRandom(GameManager.instance.BodyTypes.Types);
+        attr.FacialHair = GetRandom(GameManager.instance.FacialHairs.Styles);
+        attr.TopType = GetRandom(GameManager.instance.TopTypes.Types);
+        attr.BottomType = GetRandom(GameManager.instance.BottomTypes.Types);
 
-        attr.HairColor = Helpers.GetRandom(HairColors);
-        attr.SkinColor = Helpers.GetRandom(SkinColors);
+        attr.HairColor = GetRandom(HairColors);
+        attr.SkinColor = GetRandom(SkinColors);
 
-        attr.EyeColor = Random.ColorHSV();
-        attr.Freckles = Random.Range(0f, 1f) < 0.5;
         attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
-        attr.SpecialBodyType = Helpers.GetRandom(GameManager.instance.SpecialBodyTypes.Types);
+        attr.SpecialBodyType = GetRandom(GameManager.instance.SpecialBodyTypes.Types);
 
         attr.Height = Random.Range(0.5f, 2f);
         attr.Mass = Random.Range(0.5f, 2f);
-        attr.Personality = Helpers.GetRandom(personalities);
+        attr.Personality = GetRandom(personalities);
 
         return attr;
     }

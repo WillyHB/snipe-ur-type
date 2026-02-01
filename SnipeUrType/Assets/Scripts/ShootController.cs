@@ -76,6 +76,6 @@ public class ShootController : MonoBehaviour
         foreach (var col in person.GetComponentsInChildren<Collider2D>())
             col.enabled = false;
 
-        Debug.Log($"HIT PERSON: {hit.collider.name} | HairType={person.Attributes.HairStyle} | Height={person.Attributes.Height} | Freckles={person.Attributes.Freckles}");
+        Debug.Log($"HIT PERSON: {hit.collider.name} | HairType={person.Attributes.HairStyle} | Height={person.Attributes.Height}");
     }
 }

@@ -30,8 +30,7 @@ public class Application : MonoBehaviour
         } else
         {
             Physical.text = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions) + "\n"
-                + Helpers.GetRandom(applicant.IdealAttributes.EyeType.Descriptions) + "\n";
+                + Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions) + "\n";
         }
     }
 }
