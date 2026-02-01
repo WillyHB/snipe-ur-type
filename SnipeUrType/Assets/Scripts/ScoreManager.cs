@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI display;
     public AudioSource success;
     public AudioSource failure;
+    public GameObject hearts;
+    public GameObject brokenhearts;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,11 +52,15 @@ public class ScoreManager : MonoBehaviour
 
     void PlaySuccess()
     {
+        brokenhearts.SetActive(false);
+        hearts.SetActive(true);
         success.Play();
     }
 
     void PlayFailure()
     {
+        brokenhearts.SetActive(true);
+        hearts.SetActive(false);
         failure.Play();
     }
 
