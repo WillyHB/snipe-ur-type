@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "TopType", menuName = "Attributes/TopType")]
@@ -10,5 +9,5 @@ public class TopType : ScriptableObject
 
     public bool Male, Female;
 
-    public AnimatorController _animator;
+    public RuntimeAnimatorController _animator;
 }
