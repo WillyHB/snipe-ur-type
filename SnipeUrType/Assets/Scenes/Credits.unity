@@ -813,9 +813,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Made for McGameJam 2026\n\nProgramming: Benjamin Mak, William, Saad, \nArt:
-    Zhi, Mathieu, Oriana\nSound: Kaitlin May Wong, Benjamin Mak\nDesign: All of us\nThank
-    you for playing our game!!"
+  m_text: 'Made for McGameJam 2026
+
+
+    Programming: Benjamin, William, Saad, Zhi
+
+    Art:
+    Oriana, Mathieu, Zhi
+
+    Sound: Kaitlin, Benjamin
+
+    Design: All of us
+
+    Thank
+    you for playing our game!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9648321cea867ad7b8be0b5915ccec8, type: 2}
   m_sharedMaterial: {fileID: -7341667994708069660, guid: d9648321cea867ad7b8be0b5915ccec8, type: 2}
