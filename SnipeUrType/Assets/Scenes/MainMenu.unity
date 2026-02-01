@@ -2748,9 +2748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'f
-
-'
+  m_text: None
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9648321cea867ad7b8be0b5915ccec8, type: 2}
   m_sharedMaterial: {fileID: -7341667994708069660, guid: d9648321cea867ad7b8be0b5915ccec8, type: 2}
@@ -3366,6 +3364,7 @@ MonoBehaviour:
   hover: {fileID: 8300000, guid: a05a226a67866832fb845cb87e8ab991, type: 3}
   click: {fileID: 8300000, guid: 68f5f81b1187b1fe8a804f4c0f8ba8ea, type: 3}
   swoosh: {fileID: 8300000, guid: 96f29ab66dc1e92db9bd5e3e9769048b, type: 3}
+  hunt: {fileID: 8300000, guid: 39bcd075a706d82d98fd0b7b1f721c25, type: 3}
 --- !u!82 &1670077916
 AudioSource:
   m_ObjectHideFlags: 0
