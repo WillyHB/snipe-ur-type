@@ -1,9 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScoringSystem : MonoBehaviour
 {
     [SerializeField] private string resultsSceneName = "Score";
+    [SerializeField] private float resultsDelay = 1f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip drumRoll;
+    [SerializeField] private AudioClip boo;
 
     private bool resolved;
 
@@ -22,6 +27,9 @@ public class ScoringSystem : MonoBehaviour
         if (resolved) return;
         resolved = true;
 
+        if (GameManager.instance != null)
+            GameManager.instance.KeepOnly(person);
+
         var applicant = ApplicantSession.CurrentApplicant;
 
         int score = 0;
@@ -32,7 +40,7 @@ public class ScoringSystem : MonoBehaviour
         }
         ScoreSession.status = 2;
         ScoreSession.score = score;
-        SceneManager.LoadScene(resultsSceneName);
+        StartCoroutine(LoadResultsAfterDelay());
 
     }
     public void Miss()
@@ -40,9 +48,12 @@ public class ScoringSystem : MonoBehaviour
         if (resolved) return;
         resolved = true;
 
+        if (GameManager.instance != null)
+            GameManager.instance.ClearAllPeople();
+
         ScoreSession.status = 1;
         ScoreSession.score = 0;
-        SceneManager.LoadScene(resultsSceneName);
+        StartCoroutine(LoadResultsAfterDelay());
     }
 
     public void TimeUp()
@@ -50,8 +61,26 @@ public class ScoringSystem : MonoBehaviour
         if (resolved) return;
         resolved = true;
 
+        if (GameManager.instance != null)
+            GameManager.instance.ClearAllPeople();
+
         ScoreSession.status = 0;
         ScoreSession.score = 0;
+        StartCoroutine(LoadResultsAfterDelay());
+    }
+
+    private IEnumerator LoadResultsAfterDelay()
+    {
+         Debug.Log(ScoreSession.status);
+        if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
+        {
+            audioSource.PlayOneShot(drumRoll);
+        }
+        if (ScoreSession.status == 1 && audioSource != null && boo != null) 
+        {
+            audioSource.PlayOneShot(boo);
+        }
+        yield return new WaitForSeconds(resultsDelay);
         SceneManager.LoadScene(resultsSceneName);
     }
 

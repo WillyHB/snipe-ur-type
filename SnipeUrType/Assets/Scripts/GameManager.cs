@@ -4,18 +4,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Vector2[] personSpawn;
+    private bool roundResolved = false;
+    public void SetRoundResolved(bool value) => roundResolved = value;
     [SerializeField] private Vector2 screenCenter;
 
     private float centerOffset = 2.0f;
 
-    private List<GameObject> _personContainer;
-    
     public static GameManager instance;
 
     private void Awake()
     {
         instance = this;
-        _personContainer = new List<GameObject>();
     }
 
 
@@ -27,7 +26,6 @@ public class GameManager : MonoBehaviour
         if (spawnPos.x > screenCenter.x && !person.TryGetComponent<Animator>(out Animator a))
             person.transform.rotation = Quaternion.Euler(0, 180, 0);
         person.Initialize(attr);
-        _personContainer.Add(person.gameObject);
         return person;
     }
 
@@ -52,6 +50,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (roundResolved) return;
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -97,5 +96,32 @@ public class GameManager : MonoBehaviour
         };
 
         return spawnPoints;
+    }
+
+    public void KeepOnly (Person keep)
+    {
+        roundResolved = true;
+        GameObject[] persons = GameObject.FindGameObjectsWithTag("Person");
+
+        keep.StopWalking();
+
+        for (int i = 0; i < persons.Length; i++)
+        {
+            if (keep != null && persons[i] == keep.gameObject) continue;
+            Destroy(persons[i]);
+
+
+        }
+    }
+
+    public void ClearAllPeople()
+    {
+        roundResolved = true;
+        GameObject[] persons = GameObject.FindGameObjectsWithTag("Person");
+
+        for (int i = 0; i < persons.Length; i++)
+        {
+            Destroy(persons[i]);
+        }
     }
 }
