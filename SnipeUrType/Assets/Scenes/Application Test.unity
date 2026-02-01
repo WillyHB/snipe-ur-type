@@ -484,6 +484,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2557723037711709081, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
+      propertyPath: m_fontSize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557723037711709081, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
+      propertyPath: m_margin.z
+      value: -10.597403
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557723037711709081, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076896016523510883, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
+      propertyPath: m_fontSize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076896016523510883, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
+      propertyPath: m_margin.z
+      value: -36.928017
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076896016523510883, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5550054866041690912, guid: b01e5e0cbc244db4b90a8fd66fdf10bb, type: 3}
       propertyPath: m_Name
       value: Application
