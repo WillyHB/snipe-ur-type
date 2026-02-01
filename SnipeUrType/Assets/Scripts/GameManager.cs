@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
         instance = this;
         _personContainer = new List<GameObject>();
     }

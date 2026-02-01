@@ -77,7 +77,7 @@ public class Attributes
     {
         Attributes attr = new Attributes();
 
-        attr.Special = Random.Range(0, 100) == 1;
+        attr.Special = Random.Range(0f, 1f) < 0.5;//Random.Range(0, 100) == 1;
         if (attr.Special)
         {
             attr.SpecialBodyType = GetRandom(DataManager.instance.SpecialBodyTypes.Types);

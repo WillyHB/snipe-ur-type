@@ -15,8 +15,13 @@ public class DataManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(this);
+            return;
+        }
         instance = this;
-        
+        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame
