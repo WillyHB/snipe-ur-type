@@ -62,3 +62,8 @@ MonoBehaviour:
   - {fileID: -3221736823985859146, guid: 3ce5864540786df4bbc9a31781d1f2cb, type: 3}
   - {fileID: -548979560154896915, guid: d3585ca414b7a2c4bb339e0625741cc3, type: 3}
   - {fileID: 3217754808150080401, guid: f78ba2f045f62a14b84470d7e18dabd7, type: 3}
+  HandwrittenFonts:
+  - {fileID: 11400000, guid: 93539ea44b5d6f2458ccbe578276cda5, type: 2}
+  - {fileID: 11400000, guid: 6d7669d461f4bd84b8c8c64e7194c88d, type: 2}
+  - {fileID: 11400000, guid: 28e36b5d29b64af428bb9490a3af0160, type: 2}
+  - {fileID: 11400000, guid: cadda24453a89944581991d8907b031f, type: 2}

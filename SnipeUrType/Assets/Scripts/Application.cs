@@ -18,8 +18,6 @@ public class Application : MonoBehaviour
     public TextMeshProUGUI Personality;
     public GameObject Page;
 
-    public TMP_FontAsset[] Fonts;
-
     public bool canHide;
     public GameObject[] DisableOnHide;
 
@@ -28,14 +26,7 @@ public class Application : MonoBehaviour
     void Start()
     {
         if (!canHide)LeanTween.moveLocalY(Page, 0, 1f).setEaseOutQuad();
-        TMP_FontAsset font = Helpers.GetRandom(Fonts);
 
-        Name.font = font;
-        Address.font = font;
-        City.font = font;
-        Date.font = font;
-        Physical.font = font;
-        Personality.font = font;
 
         if (ApplicantSession.CurrentApplicant == null)
         {
@@ -52,19 +43,14 @@ public class Application : MonoBehaviour
         Signature.sprite = applicant.Signature;
         Personality.text = applicant.IdealAttributes.Personality;
 
-        if (applicant.IdealAttributes.Special) {
-            Physical.text = applicant.IdealAttributes.SpecialBodyType.Descriptions[0];
-        } else
-        {
-            string hair = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions);
-            string body = Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions);
-            string shoe = Helpers.GetRandom(applicant.IdealAttributes.ShoeType.Descriptions);
-            string top = Helpers.GetRandom(applicant.IdealAttributes.TopType.Descriptions);
-            string bottom = Helpers.GetRandom(applicant.IdealAttributes.BottomType.Descriptions);
-            string beard = applicant.IdealAttributes.Female ? "Has no beard. None at all." : Helpers.GetRandom(applicant.IdealAttributes.FacialHair.Descriptions);
-            Physical.text = hair + "\n" + body + "\n" + shoe + "\n" + top + "\n" + bottom + "\n" + beard;
-        }
+        Physical.text = applicant.DesiredPhysical;
 
+        Name.font = applicant.Handwriting;
+        Address.font = applicant.Handwriting;
+        City.font = applicant.Handwriting;
+        Date.font = applicant.Handwriting;
+        Physical.font = applicant.Handwriting;
+        Personality.font = applicant.Handwriting;
     }
 
     private void Update()
