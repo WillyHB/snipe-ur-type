@@ -369,7 +369,7 @@ Transform:
   m_GameObject: {fileID: 2876350302575648424}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -424,12 +424,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6260609238532868227, guid: a5a87792bf04fb44d92d27bf7de66032, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35fe18b7b8f4c754eaeda600df559236, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.33, y: 4.42}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 3086798533173098779}
   - component: {fileID: 4723910192096114446}
   - component: {fileID: 640477594508737692}
-  - component: {fileID: 6899730274690893301}
+  - component: {fileID: 4167364273079691655}
   m_Layer: 0
   m_Name: NMP
   m_TagString: Person
@@ -740,7 +740,7 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
---- !u!60 &6899730274690893301
+--- !u!60 &4167364273079691655
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -786,9 +786,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: 0.31667444, y: 0.88125324}
+      - {x: 0.09817432, y: 2.0485077}
+      - {x: -0.166735, y: 2.2738552}
+      - {x: -0.44687253, y: 2.187667}
+      - {x: -0.5308844, y: 0.45574376}
+      - {x: -0.5228381, y: -0.9161554}
+      - {x: -0.64114034, y: -2.1495667}
+      - {x: 0.8435298, y: -2.0858624}
+      - {x: 0.2641083, y: -0.9381606}
   m_UseDelaunayMesh: 1

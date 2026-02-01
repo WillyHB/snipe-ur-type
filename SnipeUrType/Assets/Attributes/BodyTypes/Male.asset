@@ -18,4 +18,5 @@ MonoBehaviour:
   Descriptions:
   - Is manly
   - Is not a woman
+  - Stereotypically probably will go to the gym quite often.
   _animator: {fileID: 9100000, guid: 9c2c5dac4455899418114e2d11b94184, type: 2}

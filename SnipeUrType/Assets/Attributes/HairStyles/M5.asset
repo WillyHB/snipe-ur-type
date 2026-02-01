@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Male Long Hair
   Sprite: {fileID: 6000303112480256247, guid: 29d63dd026a491a4cb4de4549d405045, type: 3}
   Male: 1
-  Female: 0
+  Female: 1
   Descriptions:
   - Looks like a woman but he is not
   - Just let's it grow

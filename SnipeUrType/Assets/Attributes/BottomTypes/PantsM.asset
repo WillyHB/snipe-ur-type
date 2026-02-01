@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: Mens Pants
   Descriptions:
   - Likes his pants on the regular side
+  - Wears P A N T S
   Male: 1
   Female: 0
   _animator: {fileID: 9100000, guid: 7a4188481e70a224894e74e67eb86f55, type: 2}

@@ -26,9 +26,16 @@ public class ButtonController : MonoBehaviour
 		Debug.Log("goo goo ga ga");
 	}
 	public void GoGamePlay() {//continue to assignment 
+		StartCoroutine(HuntWait());
 		UIAudio.instance.PlayClick();
-		SceneManager.LoadScene("SampleScene");
 	} 
+
+	private IEnumerator HuntWait()
+	{
+		UIAudio.instance.PlayHunt();
+		yield return new WaitForSeconds(2);
+		SceneManager.LoadScene("SampleScene");
+	}
 	public void GoMainMenu() { //return to main menu
 		UIAudio.instance.PlayClick();
 		SceneManager.LoadScene("MainMenu");

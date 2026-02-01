@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BottomType
   Name: Dress Pants
   Descriptions:
-  - Has really fancy pants
+  - Likes to wear fancy pants
+  - Is always dressed for the occasion!
+  - Overdresses - especially in the pants department uh oh!
   Male: 1
   Female: 0
   _animator: {fileID: 9100000, guid: 01e73a8a0e3e42c44a9bfdff860e5a28, type: 2}

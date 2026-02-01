@@ -23,14 +23,14 @@ public class Person : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Initialize(Attributes attr)
     {
-        walkSpeed = TryGetComponent<Animator>(out Animator a) ? Random.Range(1.2f, 2.5f) : Random.Range(0.8f, 2f);  // only horse has animator
-
+        walkSpeed = attr.Special ? Random.Range(1.6f, 3.5f) : Random.Range(1f, 2.5f); 
+        
         Attributes = attr;
 
         _gameManager = GameManager.instance;
 
         if (TryGetComponent<stebe>(out stebe s)) return;
-        _bodyAnim.runtimeAnimatorController = Attributes.BodyType._animator;
+        _bodyAnim.runtimeAnimatorController = attr.Special ? Attributes.SpecialBodyType._animator : Attributes.BodyType._animator;
           
         if (attr.Special) return;
         _topAnim.runtimeAnimatorController = Attributes.TopType._animator;
@@ -87,6 +87,7 @@ public class Person : MonoBehaviour
 
     private void OnBecameInvisible()    // Destroy person when they leave the screen    
     {
+        Debug.Log("WHYY GOD DEAR GOD WHY");
         Destroy(gameObject);
     }
 }
