@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
     public void KeepOnly (Person keep)
     {
         roundResolved = true;
-        GameObject[] persons = GameObject.FindGameObjectsWithTag("person");
+        GameObject[] persons = GameObject.FindGameObjectsWithTag("Person");
 
         keep.StopWalking();
 
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     public void ClearAllPeople()
     {
         roundResolved = true;
-        GameObject[] persons = GameObject.FindGameObjectsWithTag("person");
+        GameObject[] persons = GameObject.FindGameObjectsWithTag("Person");
 
         for (int i = 0; i < persons.Length; i++)
         {

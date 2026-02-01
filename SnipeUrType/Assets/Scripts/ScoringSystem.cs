@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 public class ScoringSystem : MonoBehaviour
 {
     [SerializeField] private string resultsSceneName = "Score";
-    [SerializeField] private float resultsDelay = 2f;
+    [SerializeField] private float resultsDelay = 1f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip drumRoll;
+    [SerializeField] private AudioClip boo;
 
     private bool resolved;
 
@@ -68,6 +71,15 @@ public class ScoringSystem : MonoBehaviour
 
     private IEnumerator LoadResultsAfterDelay()
     {
+         Debug.Log(ScoreSession.status);
+        if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
+        {
+            audioSource.PlayOneShot(drumRoll);
+        }
+        if (ScoreSession.status == 1 && audioSource != null && boo != null) 
+        {
+            audioSource.PlayOneShot(boo);
+        }
         yield return new WaitForSeconds(resultsDelay);
         SceneManager.LoadScene(resultsSceneName);
     }
