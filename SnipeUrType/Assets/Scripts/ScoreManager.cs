@@ -56,7 +56,7 @@ public class ScoreManager : MonoBehaviour
                 else if (score >= 40 && score < 50) writeReview("Ugh, should have just used a dating app instead");
                 else if (score >= 50 && score < 60) writeReview("The date was just ok");
                 else if (score >= 60 && score < 70) writeReview("This might be better than those dating apps…");
-                else if (score >= 70 && score < 80) writeReview("I think I’m giving love a second chance!");
+                else if (score >= 70 && score < 80) writeReview("I think I'll give love a second chance!");
                 else if (score >= 80 && score < 90) writeReview("I think I’ve just found the love of my life!");
                 else writeReview("Omg, Cupid is invited to my wedding");
 
