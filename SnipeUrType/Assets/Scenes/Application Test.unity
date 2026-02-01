@@ -1474,8 +1474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd341ea8793e70489c3460efd0074ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  personSpawn:
-  - {x: 0, y: 0}
   screenCenter: {x: 0, y: 0}
   Male: {fileID: 11400000, guid: 1865dbd6cb3da1840ae867247facf962, type: 2}
   Female: {fileID: 11400000, guid: e7e2923fca1daf44c94960f6cba12ece, type: 2}
@@ -1505,7 +1503,7 @@ Transform:
   m_GameObject: {fileID: 848463688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.30787, y: 6.3961, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

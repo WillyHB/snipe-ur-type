@@ -77,7 +77,7 @@ public class Attributes
     {
         Attributes attr = new Attributes();
 
-        attr.Special = true;//Random.Range(0, 100) == 1;
+        attr.Special = Random.Range(0, 100) == 1;
         if (attr.Special)
         {
             attr.SpecialBodyType = GetRandom(GameManager.instance.SpecialBodyTypes.Types);

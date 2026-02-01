@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Vector2[] personSpawn;
+    private Vector2[] personSpawn;
     [SerializeField] private Vector2 screenCenter;
 
     private float centerOffset = 2.0f;
@@ -44,14 +44,30 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         personSpawn = FindPersonSpawnPoints();
+        // blem
+        SpawnPerson();
+        SpawnPerson();
+        SpawnPerson();
+        SpawnPerson();
+        SpawnPerson();
+        SpawnPerson();
         SpawnPerson();
         SpawnPerson();
         // spawn initial number of people
     }
 
+
+    private float timer = 3;
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            timer = 3;
+            SpawnPerson();
+        }
+
         // spawn people periodically
     }
 

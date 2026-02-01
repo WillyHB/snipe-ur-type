@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Person
   _rigidbody2D: {fileID: 3558642511680940641}
-  _bodyAnim: {fileID: 0}
+  _bodyAnim: {fileID: 2981341196636801546}
   _topAnim: {fileID: 0}
   _bottomAnim: {fileID: 0}
   _shoeAnim: {fileID: 0}
