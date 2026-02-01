@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 3024039921532106556, guid: cdec691e9c669d24d9429055616f4da7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4540048330642424529, guid: cdec691e9c669d24d9429055616f4da7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.19
@@ -552,7 +556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5495045803005732236, guid: 7f85c08c56c7c6b4abf332c7f9a4e2c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.90556
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 5495045803005732236, guid: 7f85c08c56c7c6b4abf332c7f9a4e2c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -656,7 +660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &3279085910440330030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -668,6 +672,10 @@ PrefabInstance:
     - target: {fileID: 903410043025890322, guid: 2ce3eca4acc6c5344ab7557ce6f63d3e, type: 3}
       propertyPath: m_Name
       value: PPerson (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 903410043025890322, guid: 2ce3eca4acc6c5344ab7557ce6f63d3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7894530100753301088, guid: 2ce3eca4acc6c5344ab7557ce6f63d3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1064,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PPerson (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232599342557857502, guid: bb12d189376e0554e98f61ffc2c19e15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1098,6 +1110,10 @@ PrefabInstance:
     - target: {fileID: 2746794019091346647, guid: 89db516e73c191f4ca2b30de09ce0c6d, type: 3}
       propertyPath: m_Name
       value: PPerson (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746794019091346647, guid: 89db516e73c191f4ca2b30de09ce0c6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8388973216948749991, guid: 89db516e73c191f4ca2b30de09ce0c6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1173,7 +1189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4461285808453682936, guid: 9e39cd6d802bcdb428d4723c67d7691f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.90556
+      value: -4.19
       objectReference: {fileID: 0}
     - target: {fileID: 4461285808453682936, guid: 9e39cd6d802bcdb428d4723c67d7691f, type: 3}
       propertyPath: m_LocalPosition.y
