@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aeac1513bf6c1464e82021a9142f0845
+guid: fe9d27b7b7a27ab40a7cfe079f1a6973
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,10 +103,10 @@ TextureImporter:
       name: womanW2_0
       rect:
         serializedVersion: 2
-        x: 985
-        y: 281
-        width: 668
-        height: 1344
+        x: 155
+        y: 9
+        width: 234
+        height: 473
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

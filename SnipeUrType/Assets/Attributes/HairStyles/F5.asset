@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e2730f85959ff40b5cad052a304b37, type: 3}
+  m_Name: F5
+  m_EditorClassIdentifier: Assembly-CSharp::HairStyle
+  Name: Female Long Straight
+  Sprite: {fileID: -4047272653328256287, guid: cf247281c4ffaf9408af776d7b7962ab, type: 3}
+  Male: 0
+  Female: 1
+  Descriptions:
+  - Is really straight headed

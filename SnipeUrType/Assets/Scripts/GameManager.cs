@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     {
         int index = Random.Range(0, personSpawn.Length);
         Vector2 spawnPoint = personSpawn[index];
-        return new Vector3(spawnPoint.x + screenCenter.x, spawnPoint.y + screenCenter.y, Random.Range(0, 3));
+        return new Vector3(spawnPoint.x + screenCenter.x, spawnPoint.y + screenCenter.y, 0);
     }
 
     public Vector2 GetWalkDirection(Vector3 personPosition)

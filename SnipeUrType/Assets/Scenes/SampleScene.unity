@@ -615,7 +615,7 @@ MonoBehaviour:
   hitMarker: {fileID: 1458108374}
   audioSource: {fileID: 0}
   hitSfx: {fileID: 8300000, guid: e3cb68b126056874090b012fca014e06, type: 3}
-  missSfx: {fileID: 8300000, guid: 4acef164f7ef45049a83c1ff2f55e8c3, type: 3}
+  missSfx: {fileID: 8300000, guid: 4619ca285e249cf4a83e0b43e5ac9220, type: 3}
 --- !u!4 &1458962320
 Transform:
   m_ObjectHideFlags: 0
@@ -761,11 +761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f552335ad911b499056ae8168f6627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Person
-  _rigidbody2D: {fileID: 0}
-  _gameManager: {fileID: 0}
-  _bodyAnim: {fileID: 0}
-  _topAnim: {fileID: 0}
-  _bottomAnim: {fileID: 0}
 --- !u!61 &1488499088
 BoxCollider2D:
   m_ObjectHideFlags: 0
