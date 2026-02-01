@@ -17,6 +17,9 @@ public class ScoreManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log($"Score scene cursor: visible={Cursor.visible}, lock ={Cursor.lockState}");
         status = ScoreSession.status;
         score = ScoreSession.score;
 
