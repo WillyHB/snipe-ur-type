@@ -1758,6 +1758,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d7669d461f4bd84b8c8c64e7194c88d, type: 2}
   - {fileID: 11400000, guid: 28e36b5d29b64af428bb9490a3af0160, type: 2}
   - {fileID: 11400000, guid: cadda24453a89944581991d8907b031f, type: 2}
+  canHide: 0
+  DisableOnHide: []
 --- !u!1 &5674664629712985279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,7 +2940,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 14
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
