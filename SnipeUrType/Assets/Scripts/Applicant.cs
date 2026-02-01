@@ -110,9 +110,9 @@ public class Applicant
 
     public string DesiredPhysical { get; private set; }
 
-    public static Applicant GetNewApplicant()
+    public static Applicant GetNewApplicant(bool getSpecial = false)
     {
-        Attributes attr = Attributes.GetRandomAttr();
+        Attributes attr = Attributes.GetRandomAttr(getSpecial);
         return new()
         {
             IdealAttributes = attr,

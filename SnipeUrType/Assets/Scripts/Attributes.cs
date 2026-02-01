@@ -98,12 +98,13 @@ public class Attributes
 
     public string Personality { get; private set; }
 
-    public static Attributes GetRandomAttr()
+    public static Attributes GetRandomAttr(bool getSpecial = false)
     {
         Attributes attr = new Attributes();
 
         attr.Personality = GetRandom(personalities);
-        attr.Special = Random.Range(0, 100) == 5;//true; 
+
+        attr.Special = getSpecial || Random.Range(0, GameCounter.Counter >= 3 && GameCounter.Counter <= 5 ? 5 : 100) == 1;//true; 
 
         if (attr.Special)
         {
