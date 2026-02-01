@@ -825,8 +825,10 @@ MonoBehaviour:
 
     Design: All of us
 
-    Thank
-    you for playing our game!!'
+    Voice
+    Acting: Oriana, Kaitlin, Zhi, William, Laura
+
+    Thank you for playing our game!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9648321cea867ad7b8be0b5915ccec8, type: 2}
   m_sharedMaterial: {fileID: -7341667994708069660, guid: d9648321cea867ad7b8be0b5915ccec8, type: 2}
@@ -835,8 +837,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292471023
-  m_fontColor: {r: 0.9372549, g: 0.9098039, b: 0.8509804, a: 1}
+    rgba: 4281337592
+  m_fontColor: {r: 0.9716981, g: 0.022917405, b: 0.186779, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
