@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoringSystem : MonoBehaviour
 {
-    [SerializeField] private string resultsSceneName = "Score";
+    [SerializeField] private string resultsSceneName = "TimesUp";
 
     private bool resolved;
 
