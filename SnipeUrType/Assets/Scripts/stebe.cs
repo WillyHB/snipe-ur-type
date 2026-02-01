@@ -4,8 +4,8 @@ public class stebe : MonoBehaviour
 {
 
     private float lastTime;
-    private float interval = 0.25f;
-    private float tiltAngle = 25f;
+    private float interval = 0.50f;
+    private float tiltAngle = 20f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
