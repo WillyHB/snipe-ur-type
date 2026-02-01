@@ -79,10 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Person
   _rigidbody2D: {fileID: 8411372682152662250}
-  _gameManager: {fileID: 0}
-  _bodyAnim: {fileID: 0}
-  _topAnim: {fileID: 0}
-  _bottomAnim: {fileID: 0}
+  _bodyAnim: {fileID: 4755454286397763126}
+  _topAnim: {fileID: 6316004029740876246}
+  _bottomAnim: {fileID: 1972180285805515753}
+  _shoeAnim: {fileID: 57372131113064814}
+  _hairRenderer: {fileID: 5638648060766419201}
+  _beardRenderer: {fileID: 0}
   _sortingGroup: {fileID: 3334984635012000508}
 --- !u!210 &3334984635012000508
 SortingGroup:
