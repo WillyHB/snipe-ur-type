@@ -71,9 +71,11 @@ public class ScoringSystem : MonoBehaviour
 
     private IEnumerator LoadResultsAfterDelay()
     {
+        ApplicantSession.CurrentApplicant = null;
+        GameCounter.Counter++;
         if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
         {
-            audioSource.PlayOneShot(drumRoll);
+            //audioSource.PlayOneShot(drumRoll);
         }
         if (ScoreSession.status == 1 && audioSource != null && boo != null) 
         {

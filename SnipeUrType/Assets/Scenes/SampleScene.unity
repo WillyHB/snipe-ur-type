@@ -1322,6 +1322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71f07f210c076c4fbf91a9d307397da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootController
+  BgMusicGameObject: {fileID: 331396368}
   cam: {fileID: 519420031}
   maxDistance: 100
   hittableLayers:

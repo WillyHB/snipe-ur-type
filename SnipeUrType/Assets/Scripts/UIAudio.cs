@@ -9,6 +9,7 @@ public class UIAudio : MonoBehaviour
     public AudioClip hover;
     public AudioClip click;
     public AudioClip swoosh;
+    public AudioClip hunt;
 
     void Awake()
     {
@@ -21,6 +22,11 @@ public class UIAudio : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void PlayHunt()
+    {
+        PlaySound(hunt);
     }
     public void PlayHover()
     {
