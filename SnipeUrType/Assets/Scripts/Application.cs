@@ -6,7 +6,7 @@ public class Application : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private Applicant applicant;
+    public Applicant applicant { get; private set; }
 
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Address;
@@ -18,14 +18,21 @@ public class Application : MonoBehaviour
     void Start()
     {
         applicant = Applicant.GetNewApplicant();
+        ApplicantSession.CurrentApplicant = applicant;
+        
         Name.text = applicant.FirstName + " "  + applicant.LastName;
         Address.text = applicant.StreetNumber + " " + applicant.Street;
         City.text = applicant.City;
         Signature.sprite = applicant.Signature;
         Personality.text = applicant.IdealAttributes.Personality;
-        Physical.text = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions) + "\n"
-            + Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions) + "\n"
-            + Helpers.GetRandom(applicant.IdealAttributes.EyeType.Descriptions) + "\n";
-    }
 
+        if (applicant.IdealAttributes.Special) {
+            Physical.text = applicant.IdealAttributes.SpecialBodyType.Descriptions[0];
+        } else
+        {
+            Physical.text = Helpers.GetRandom(applicant.IdealAttributes.HairStyle.Descriptions) + "\n"
+                + Helpers.GetRandom(applicant.IdealAttributes.BodyType.Descriptions) + "\n"
+                + Helpers.GetRandom(applicant.IdealAttributes.EyeType.Descriptions) + "\n";
+        }
+    }
 }

@@ -27,6 +27,9 @@ public class Timer: MonoBehaviour {
     }
 
     void timerEnded() {
-        SceneManager.LoadScene("TimesUp");
+        ScoreManager.status = 0;
+        SceneManager.LoadScene("Score");
+        Debug.Log("times up!");
+        FindFirstObjectByType<ScoringSystem>()?.TimeUp();
     }
 }

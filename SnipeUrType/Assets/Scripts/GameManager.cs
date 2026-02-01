@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
         instance = this;
+        _personContainer = new List<GameObject>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

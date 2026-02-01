@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7d5dcd09a00764d97d503b291801c7, type: 3}
+  m_Name: ShoesM
+  m_EditorClassIdentifier: Assembly-CSharp::ShoeType
+  Name: Male Shoes
+  Descriptions:
+  - Is like just so Baisc
+  Male: 1
+  Female: 0
+  _animator: {fileID: 9100000, guid: d9ae7bc47f0572f4a923a1025c57a0ff, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e2730f85959ff40b5cad052a304b37, type: 3}
+  m_Name: M3
+  m_EditorClassIdentifier: Assembly-CSharp::HairStyle
+  Name: Male Bach Hair
+  Sprite: {fileID: 6695424398814120764, guid: df9ba2e6b0fe5254cb0d6af5f11cf1f1, type: 3}
+  Male: 1
+  Female: 0
+  Descriptions:
+  - Has just an amazing head of hair
+  - Has really lucious locks

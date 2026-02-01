@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423666388e0610a498ea2b2b963b2c2d, type: 3}
   m_Name: Ben
   m_EditorClassIdentifier: Assembly-CSharp::BodyType
-  Name: 
+  Name: Ben
   IsFemale: 0
   BodyPrefab: {fileID: 0}
-  AudioComment: {fileID: 0}
-  Descriptions: []
+  AudioComment: {fileID: 8300000, guid: a519a784f540eb243b5c1c6802be5431, type: 3}
+  Descriptions:
+  - Asian baddie who is like really tall and cool
   _animator: {fileID: 0}

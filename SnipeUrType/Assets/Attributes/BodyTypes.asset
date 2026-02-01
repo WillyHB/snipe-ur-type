@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BodyTypes
   m_EditorClassIdentifier: Assembly-CSharp::BodyTypes
   Types:
-  - {fileID: 11400000, guid: df6a08de03e6d734bb7c32f41eb89772, type: 2}
-  - {fileID: 11400000, guid: 806714f64b0179542b046db2f578f2da, type: 2}
+  - {fileID: 11400000, guid: 1865dbd6cb3da1840ae867247facf962, type: 2}
+  - {fileID: 11400000, guid: e7e2923fca1daf44c94960f6cba12ece, type: 2}
