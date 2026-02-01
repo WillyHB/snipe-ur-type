@@ -103,7 +103,7 @@ public class Attributes
         Attributes attr = new Attributes();
 
         attr.Personality = GetRandom(personalities);
-        attr.Special = true; //Random.Range(0, 100) == 1;
+        attr.Special = Random.Range(0, 100) == 1;//true; 
 
         if (attr.Special)
         {
@@ -128,8 +128,8 @@ public class Attributes
         attr.SkinColor = GetRandom(SkinColors);
 
 
-        attr.Height = Random.Range(0.75f, 1.5f);
-        attr.Mass = Random.Range(0.75f, 1.5f);
+        attr.Height = Random.Range(0.75f, 1.2f);
+        attr.Mass = 1;// Random.Range(0.75f, 1.5f);
 
         return attr;
     }
