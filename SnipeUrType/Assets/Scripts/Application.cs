@@ -39,7 +39,7 @@ public class Application : MonoBehaviour
 
         if (ApplicantSession.CurrentApplicant == null)
         {
-            applicant = Applicant.GetNewApplicant();
+            applicant = Applicant.GetNewApplicant(GameCounter.Counter >= 3 && GameCounter.Counter <= 5);
             ApplicantSession.CurrentApplicant = applicant;
         }else
         {
