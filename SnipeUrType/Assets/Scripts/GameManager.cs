@@ -4,10 +4,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Vector2[] personSpawn;
+    private bool roundResolved = false;
+    public void SetRoundResolved(bool value) => roundResolved = value;
     [SerializeField] private Vector2 screenCenter;
 
     private float centerOffset = 2.0f;
 
+    public List<GameObject> _personContainer;
+    
     public static GameManager instance;
 
     private void Awake()
@@ -48,6 +52,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (roundResolved) return;
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -93,5 +98,41 @@ public class GameManager : MonoBehaviour
         };
 
         return spawnPoints;
+    }
+
+    public void KeepOnly (Person keep)
+    {
+        roundResolved = true;
+        if (_personContainer == null) return;
+
+        for (int i = _personContainer.Count - 1; i>=0; i--)
+        {
+            GameObject go = _personContainer[i];
+            if (go == null)
+            {
+                _personContainer.RemoveAt(i);
+                continue;
+            }
+            if (keep != null && go == keep.gameObject)
+            {    
+                keep.StopWalking();
+                continue;
+            }    
+            Destroy(go); 
+            _personContainer.RemoveAt(i);
+        }
+    }
+
+    public void ClearAllPeople()
+    {
+        roundResolved = true;
+        if (_personContainer == null) return;
+
+        for (int i = _personContainer.Count - 1; i >= 0; i --)
+        {
+            GameObject go = _personContainer[i];
+            if (go != null) Destroy(go);
+        }
+        _personContainer.Clear();
     }
 }

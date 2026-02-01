@@ -427,6 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoringSystem
   resultsSceneName: Score
+  resultsDelay: 2
 --- !u!4 &1088283924
 Transform:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1458108373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -671,8 +672,8 @@ MonoBehaviour:
   crosshairUI: {fileID: 1102814980}
   hitMarker: {fileID: 1458108374}
   audioSource: {fileID: 0}
-  hitSfx: {fileID: 8300000, guid: e3cb68b126056874090b012fca014e06, type: 3}
-  missSfx: {fileID: 8300000, guid: 4619ca285e249cf4a83e0b43e5ac9220, type: 3}
+  hitSfx: {fileID: 8300000, guid: 73b6bb4ea50b5c5d99a3cb7194fddb7a, type: 3}
+  missSfx: {fileID: 8300000, guid: 73b6bb4ea50b5c5d99a3cb7194fddb7a, type: 3}
 --- !u!4 &1458962320
 Transform:
   m_ObjectHideFlags: 0
