@@ -12,6 +12,7 @@ public class cutscene : MonoBehaviour
     {
         videoPlayer = GetComponent<VideoPlayer>();
         videoPlayer.loopPointReached += OnVideoFinished;
+        videoPlayer.Play();
     }
 
     void OnVideoFinished(VideoPlayer vp)
