@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: Mens Tshirt
   Descriptions:
   - Has his arms lookin BIG in his tshirt
+  - Has no sleeves on the clothes he wears
   Male: 1
   Female: 0
   _animator: {fileID: 9100000, guid: 79840a5711caf814b9e7d93476fcf1eb, type: 2}

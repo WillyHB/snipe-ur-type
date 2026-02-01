@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShoeType
   Name: Male Shoes
   Descriptions:
-  - Is like just so Baisc
+  - Has just like basic shoes
+  - Doesn't go too crazy with shoes
   Male: 1
   Female: 0
   _animator: {fileID: 9100000, guid: d9ae7bc47f0572f4a923a1025c57a0ff, type: 2}
