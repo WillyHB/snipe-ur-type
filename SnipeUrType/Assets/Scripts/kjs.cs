@@ -15,7 +15,7 @@ public class kjs : MonoBehaviour
     }
     void Start()
     {
-        timer = 0f;
+        timer = Time.time;
         audioSource.Play();
     }
 
@@ -25,12 +25,6 @@ public class kjs : MonoBehaviour
         if (Time.time - timer > 2.4f)
         {
             transform.localScale += Vector3.one * speed * Time.deltaTime;
-        }
-
-        if (Time.time - timer > 3.9f)
-        {
-            ScoreManager.score = 3;
-            SceneManager.LoadScene("MainMenu");
         }
     }
 }

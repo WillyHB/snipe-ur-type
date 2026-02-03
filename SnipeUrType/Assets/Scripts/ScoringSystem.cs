@@ -11,6 +11,8 @@ public class ScoringSystem : MonoBehaviour
     [SerializeField] private AudioClip drumRoll;
     [SerializeField] private AudioClip boo;
 
+    [SerializeField] private GameObject k;
+
     private bool resolved;
 
     private void OnEnable()
@@ -31,6 +33,11 @@ public class ScoringSystem : MonoBehaviour
         if (GameManager.instance != null)
             GameManager.instance.KeepOnly(person);
 
+        //if (person.Attributes.Special)
+        //{
+        //    Debug.Log(person.Attributes.SpecialBodyType.name);
+        //}
+
         var applicant = ApplicantSession.CurrentApplicant;
 
         int score = 0;
@@ -39,9 +46,17 @@ public class ScoringSystem : MonoBehaviour
         {
             score = ComputeScore(applicant.IdealAttributes, person.Attributes);
         }
-        ScoreSession.status = 2;
+
+        if (person.Attributes.Special && person.Attributes.SpecialBodyType.name == "Ben")
+        {
+            ScoreSession.status = 3;
+        }
+        else
+        {
+            ScoreSession.status = 2;
+        }
         ScoreSession.score = score;
-        StartCoroutine(LoadResultsAfterDelay());
+        StartCoroutine(LoadResultsAfterDelay(person));
 
     }
     public void Miss()
@@ -54,7 +69,7 @@ public class ScoringSystem : MonoBehaviour
 
         ScoreSession.status = 1;
         ScoreSession.score = 0;
-        StartCoroutine(LoadResultsAfterDelay());
+        StartCoroutine(LoadResultsAfterDelay(null));
     }
 
     public void TimeUp()
@@ -67,13 +82,19 @@ public class ScoringSystem : MonoBehaviour
 
         ScoreSession.status = 0;
         ScoreSession.score = 0;
-        StartCoroutine(LoadResultsAfterDelay());
+        StartCoroutine(LoadResultsAfterDelay(null));
     }
 
-    private IEnumerator LoadResultsAfterDelay()
+    private IEnumerator LoadResultsAfterDelay(Person? person)
     {
         ApplicantSession.CurrentApplicant = null;
         GameCounter.Counter++;
+        if (ScoreSession.status == 3 && audioSource != null && drumRoll != null) 
+        {
+            Instantiate(k, Vector3.zero, Quaternion.identity);
+            yield return new WaitForSeconds(2.7f);
+            SceneManager.LoadScene("MainMenu");
+        }
         if (ScoreSession.status == 2 && audioSource != null && drumRoll != null) 
         {
             audioSource.PlayOneShot(drumRoll);
