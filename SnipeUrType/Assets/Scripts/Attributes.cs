@@ -104,7 +104,7 @@ public class Attributes
 
         attr.Personality = GetRandom(personalities);
 
-        attr.Special = true;  //getSpecial || Random.Range(0, GameCounter.Counter >= 3 && GameCounter.Counter <= 5 ? 5 : 100) == 1; 
+        attr.Special = getSpecial || Random.Range(0, GameCounter.Counter >= 3 && GameCounter.Counter <= 5 ? 5 : 100) == 1; //true;
 
         if (attr.Special)
         {
