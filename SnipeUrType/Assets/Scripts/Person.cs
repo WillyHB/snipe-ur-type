@@ -91,7 +91,7 @@ public class Person : MonoBehaviour
 
     private void OnBecameInvisible()    // Destroy person when they leave the screen    
     {
-        Debug.Log("WHYY GOD DEAR GOD WHY");
+        //Debug.Log("WHYY GOD DEAR GOD WHY");
         Destroy(gameObject);
     }
 }

@@ -8,17 +8,24 @@ public class cutscene : MonoBehaviour
 
     private VideoPlayer videoPlayer;
     private bool loading = false;
+    private bool playing = false;
 
     void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
         videoPlayer.loopPointReached += OnVideoFinished;
-        videoPlayer.Play();
     }
 
     private void Update()
     {
         if (loading) return;
+
+        if (Input.GetMouseButton(0) && !playing)
+        {
+            //Debug.Log("S");
+            videoPlayer.Play();
+            playing = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
