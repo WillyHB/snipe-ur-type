@@ -85,7 +85,7 @@ public class ScoringSystem : MonoBehaviour
         StartCoroutine(LoadResultsAfterDelay(null));
     }
 
-    private IEnumerator LoadResultsAfterDelay(Person? person)
+    private IEnumerator LoadResultsAfterDelay(Person person)
     {
         ApplicantSession.CurrentApplicant = null;
         GameCounter.Counter++;

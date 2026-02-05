@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ShootController : MonoBehaviour
 {
     public static System.Action<Person> OnPersonShot;  
-    private bool hasShot;
+    public bool HasShot { get; private set; }
     public GameObject BgMusicGameObject;
 
     [Header("Raycast")]
@@ -37,9 +37,10 @@ public class ShootController : MonoBehaviour
 
     private void Shoot()
     {
-        if (hasShot) return;
+        if (HasShot) return;
         Destroy(BgMusicGameObject);
-        hasShot = true;
+        HasShot = true;
+        FindFirstObjectByType<Application>().canHide = false;
 
         if (cam == null)
         {
